@@ -3,7 +3,7 @@
 Techniche is a suite of decision support tools to help business users evaluate the probability and significance of future market trends by using patent documents to predict granular technological specializations - tech niches - in machine learning markets. Techniche augments human decision-making by surfacing and evaluating data-driven market signals via statistical learning of the technical details of machine learning inventions described in the text of patent documents.
 
 ### Business value
-Early-mover advantages depend on the ability of business decision-makers to acquire and triangulate knowledge of the pipeline of machine learning technologies that might shape markets into the future.
+Early-mover advantages depend on the ability of business decision-makers to acquire knowledge of the pipeline of machine learning technologies that might shape markets into the future.
 
 ### Data sources
 Techniche learns from public patent documents of the United States Patent Organization (USPTO). Data is acquired from the USPTO PatentsView API and bulk downloads, and subsequently stored in an Amazon Web Services (AWS) cloud bucket and PostgreSQL database. While USPTO provides a graphical interface for retrieval and exploratory visualization of the patent data contained in the API, Techniche shares analytical insights of the full patent documents that are otherwise commonly limited to specialized research communities or paying customers of proprietary patent analytics databases. 
