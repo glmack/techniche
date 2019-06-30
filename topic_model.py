@@ -41,5 +41,13 @@ def lemmatize_docs(docs, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']):
         lemmatized_docs.append([token.lemma_ for token in doc if token.pos_ in allowed_postags])
     return lemmatized_docs
 
+def convert_bytes(num, suffix='B'):
+    """ convert bytes int to int in aggregate units"
+    for unit in ['','K','M','G','T','P','E','Z']:
+        if abs(num) < 1024.0:
+            return "%3.1f%s%s" % (num, unit, suffix)
+        num /= 1024.0
+    return "%.1f%s%s" % (num, 'Yi', suffix)
+
 
 
