@@ -42,7 +42,7 @@ def lemmatize_docs(docs, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']):
     return lemmatized_docs
 
 def convert_bytes(num, suffix='B'):
-    """ convert bytes int to int in aggregate units"
+    """ convert bytes int to int in aggregate units"""
     for unit in ['','K','M','G','T','P','E','Z']:
         if abs(num) < 1024.0:
             return "%3.1f%s%s" % (num, unit, suffix)
