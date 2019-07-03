@@ -1,3 +1,46 @@
+
+def get_patents_by_month(begin_date,end_date, pats_per_page):
+    """ requests patent data from PatentsView API by date range"""
+    endpoint_url = 'http://www.patentsview.org/api/patents/query'
+    page_counter=1
+    data = []
+    results = {}
+    count=1
+    
+    for i in range(round(100000/pats_per_page)): # TODO (Lee) - replace with datetime for begin_date to end_date
+        
+        if count ==0:
+            print("error/complete")
+            break
+            
+        elif count > 0:     
+            # build query
+            query = {"_and":[{"_gte":{"patent_date":"2017-01-01"}},{"_lte":{"patent_date":"2017-01-31"}}]}
+            fields=pat_fields
+            options={"page": page_counter, "per_page":pats_per_page}
+            sort=[{"patent_date":"desc"}]
+            params={'q': json.dumps(query),
+                    'f': json.dumps(fields),
+                    'o': json.dumps(options),
+                    's': json.dumps(sort)
+                        }
+    
+            # request and results
+            response = requests.get(endpoint_url, params=params)
+            status = response.status_code
+            print("status:", status,';',"page_counter:",page_counter, ";", "iteration:",i)
+            results = response.json()
+            count = results.get("count")
+            total_pats = results.get("total_patent_count")
+            print("patents on current page:",count,';', "total patents:",total_pats)
+            data.extend(results)
+            page_counter+=1
+        
+    return data
+            # TODO (Lee) results =  json.loads(response.content)
+            # TODO (Lee) places.extend(results['results'])
+            # TODO (Lee) time.sleep(2)
+
 def tokenize_docs(docs):
     """convert words in corpus to word tokens"""
     tokenized_docs = []
