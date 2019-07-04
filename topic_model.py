@@ -155,10 +155,12 @@ def get_patents_by_month(begin_date,end_date, pats_per_page):
             status = response.status_code
             print("status:", status,';',"page_counter:",page_counter,) # ";", "iteration:",i
             results = response.json()
+            # extract data from response
+            data_response = results['patents']
             count = results.get("count")
             total_pats = results.get("total_patent_count")
             print("patents on current page:",count,';', "total patents:",total_pats)
-            data.append(results)
+            data.append(data_response)
             page_counter+=1
         
         else:
@@ -166,9 +168,9 @@ def get_patents_by_month(begin_date,end_date, pats_per_page):
             break
         
     return data
-            # TODO (Lee) results =  json.loads(response.content)
-            # TODO (Lee) places.extend(results['results'])
-            # TODO (Lee) time.sleep(2)
+            # TODO (Lee) ? results =  json.loads(response.content)
+            # TODO (Lee) ? places.extend(results['results'])
+            # TODO (Lee) ? time.sleep(2)
 
 def tokenize_docs(docs):
     """convert words in corpus to word tokens"""
