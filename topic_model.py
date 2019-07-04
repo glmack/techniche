@@ -95,7 +95,6 @@ def get_patents_by_month(begin_date,end_date, pats_per_page):
     'nber_total_num_inventors',
     'nber_total_num_patents',
     'patent_abstract',
-    'patent_average_processing_time',
     'patent_date',
     'patent_firstnamed_assignee_city',
     'patent_firstnamed_assignee_country',
@@ -112,12 +111,6 @@ def get_patents_by_month(begin_date,end_date, pats_per_page):
     'patent_firstnamed_inventor_longitude',
     'patent_firstnamed_inventor_state',
     'patent_kind',
-    'patent_num_cited_by_us_patents',
-    'patent_num_claims',
-    'patent_num_combined_citations',
-    'patent_num_foreign_citations',
-    'patent_num_us_application_citations',
-    'patent_num_us_patent_citations',
     'patent_number',
     'patent_processing_time',
     'patent_title',
@@ -135,7 +128,7 @@ def get_patents_by_month(begin_date,end_date, pats_per_page):
     'wipo_field_title',
     'wipo_sector_title',
     'wipo_sequence']
-    for i in range(round(100000/pats_per_page)): # TODO (Lee) - replace with datetime for begin_date to end_date
+    while True: # TODO (Lee) - replace with datetime for begin_date to end_date
         
         if count ==0:
             print("error/complete")
@@ -143,7 +136,11 @@ def get_patents_by_month(begin_date,end_date, pats_per_page):
             
         elif count > 0:     
             # build query
-            query = {"_and":[{"_gte":{"patent_date":"2017-01-01"}},{"_lte":{"patent_date":"2017-01-31"}}]}
+            query = {"_and":[{"_gte":{"patent_date":begin_date}},{"_lte":{end_date:"2019-01-01"}}]},
+            query={"_or":[{"_text_phrase":{"patent_title":"natural language"}},
+                          {"_text_phrase":{"patent_abstract":"natural language"}}]}
+#             {"_or":[{"cpc_subgroup_id": "G06T3/4046"},
+#                     {"cpc_subgroup_id": "G06T9/002"}]}
             fields=pat_fields
             options={"page": page_counter, "per_page":pats_per_page}
             sort=[{"patent_date":"desc"}]
@@ -156,7 +153,7 @@ def get_patents_by_month(begin_date,end_date, pats_per_page):
             # request and results
             response = requests.get(endpoint_url, params=params)
             status = response.status_code
-            print("status:", status,';',"page_counter:",page_counter, ";", "iteration:",i)
+            print("status:", status,';',"page_counter:",page_counter,) # ";", "iteration:",i
             results = response.json()
             count = results.get("count")
             total_pats = results.get("total_patent_count")
@@ -165,6 +162,7 @@ def get_patents_by_month(begin_date,end_date, pats_per_page):
             page_counter+=1
         
         else:
+            print("error #2/complete")
             break
         
     return data
