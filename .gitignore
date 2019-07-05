@@ -1,9 +1,9 @@
 # Directories
-/data
+data/
 
-#
-/.ipynb_checkpoints
-/__pycache__
+# python folders
+.ipynb_checkpoints/
+__pycache__/
 
 # Compiled source #
 ###################
