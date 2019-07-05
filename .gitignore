@@ -1,6 +1,10 @@
 # Directories
 /data
 
+#
+/.ipynb_checkpoints
+/__pycache__
+
 # Compiled source #
 ###################
 *.com
