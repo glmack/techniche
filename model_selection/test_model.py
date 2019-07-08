@@ -1,3 +1,41 @@
+def get_ml_patents():
+    """ builds api query for initial ml dataset"""
+    import json
+    import requests
+    query={"_or":[{"_text_phrase":{"patent_title":"natural language"}},
+                  {"_text_phrase":{"patent_abstract":"natural language"}},
+                  {"_text_phrase":{"patent_abstract":"machine learning"}},
+                  {"_text_phrase":{"patent_title":"machine learning"}},
+                  {"_text_phrase":{"patent_abstract":"computer vision"}},
+                  {"_text_phrase":{"patent_abstract":"computer vision"}}
+    ]}
+    # uncomment to use alternate query options
+    # query={"cpc_subgroup_id":"G06T3/4046"}
+    # query = {"_and":[{"_gte":{"patent_date":"2017-01-01"}},{"_lte":{"patent_date":"2017-01-31"}}]}
+    # query={"_and":
+    #         [{"_or":
+    #             [{"_text_phrase":{"patent_title":"machine learning"}}
+    #             ,{"_text_phrase":{"patent_abstract":"machine learning"}}]}
+    #         ,{"_and":
+    #       [{"patent_year":2016}]}]}
+    fields=pat_fields
+    options={"per_page":2500}
+    sort=[{"patent_date":"desc"}]
+
+    params={'q': json.dumps(query),
+            'f': json.dumps(fields),
+            'o': json.dumps(options),
+            's': json.dumps(sort)}
+
+    # request and results
+    response = requests.get(endpoint_url, params=params)
+    status = response.status_code
+    print("status:", status)
+    results = response.json()
+    count = results.get("count")
+    total_pats = results.get("total_patent_count")
+    print("patents on current page:",count,';', "total patents:",total_pats)
+    return results
 
 def get_patents_by_month(begin_date,end_date, pats_per_page):
     """ requests patent data from PatentsView API by date range"""
@@ -128,17 +166,43 @@ def get_patents_by_month(begin_date,end_date, pats_per_page):
     'wipo_field_title',
     'wipo_sector_title',
     'wipo_sequence']
-    while True: # TODO (Lee) - replace with datetime for begin_date to end_date
-        
+
+    query = {"_and":[{"_gte":{"patent_date":begin_date}},{"_lte":{end_date:"2019-01-01"}}]}
+    
+    fields=pat_fields
+    options={"page": page_counter, "per_page":pats_per_page}
+    sort=[{"patent_date":"desc"}]
+    params={'q': json.dumps(query),
+            'f': json.dumps(fields),
+            'o': json.dumps(options),
+            's': json.dumps(sort)
+    }
+
+    # response = requests.get(endpoint_url, params = params)
+    # results =  json.loads(response.content)
+    # places.extend(results['results'])
+    # time.sleep(2)
+    # request and results
+    response = requests.get(endpoint_url, params=params)
+    status = response.status_code
+    # print("status:", status,';',"page_counter:",page_counter,) # ";", "iteration:",i
+    results = response.json()
+    # extract data from response
+    data_response = results['patents']
+    count = results.get("count")
+    total_pats = results.get("total_patent_count")
+    # print("patents on current page:",count,';', "total patents:",total_pats)
+    data.append(data_response)
+
+    while (total_pats/pats_per_page*page_counter): # TODO (Lee) - replace with datetime for begin_date to end_date
         if count ==0:
             print("error/complete")
             break
             
         elif count > 0:     
             # build query
-            query = {"_and":[{"_gte":{"patent_date":begin_date}},{"_lte":{end_date:"2019-01-01"}}]},
-            query={"_or":[{"_text_phrase":{"patent_title":"natural language"}},
-                          {"_text_phrase":{"patent_abstract":"natural language"}}]}
+            query = {"_and":[{"_gte":{"patent_date":begin_date}},{"_lte":{end_date:"2019-01-01"}}]}
+
 #             {"_or":[{"cpc_subgroup_id": "G06T3/4046"},
 #                     {"cpc_subgroup_id": "G06T9/002"}]}
             fields=pat_fields
@@ -151,16 +215,16 @@ def get_patents_by_month(begin_date,end_date, pats_per_page):
                         }
     
             # request and results
-            response = requests.get(endpoint_url, params=params)
-            status = response.status_code
-            print("status:", status,';',"page_counter:",page_counter,) # ";", "iteration:",i
-            results = response.json()
+            # response = requests.get(endpoint_url, params=params)
+            # status = response.status_code
+            # print("status:", status,';',"page_counter:",page_counter,) # ";", "iteration:",i
+            # results = response.json()
             # extract data from response
-            data_response = results['patents']
+            # data_response = results['patents']
             count = results.get("count")
-            total_pats = results.get("total_patent_count")
-            print("patents on current page:",count,';', "total patents:",total_pats)
-            data.append(data_response)
+            # total_pats = results.get("total_patent_count")
+            # print("patents on current page:",count,';', "total patents:",total_pats)
+            data.extend(data_response)
             page_counter+=1
         
         else:
