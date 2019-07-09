@@ -178,6 +178,12 @@ def get_patents_by_month(begin_date, end_date, pats_per_page):
             # TODO (Lee) ? places.extend(results['results'])
             # TODO (Lee) ? time.sleep(2)
 
+def create_title_abstract_col(data):
+    for dictionary in data:
+        dictionary['patent_title_abstract'] = (str([dictionary['patent_title'] + 
+                                                    '. ' + 
+                                                    dictionary['patent_abstract']][0]))
+
 def tokenize_docs(docs):
     """convert words in corpus to word tokens"""
     tokenized_docs = []
