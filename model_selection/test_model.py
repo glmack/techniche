@@ -57,7 +57,7 @@ def get_patent_fields_df():
     return df
   
 def get_ml_patents():
-    """ builds api query for initial ml dataset"""
+    """builds api query for initial ml dataset"""
     import json
     import requests
     endpoint_url = 'http://www.patentsview.org/api/patents/query'
@@ -98,7 +98,7 @@ def get_ml_patents():
     return data_resp
 
 def get_patents_by_month(begin_date, end_date, pats_per_page):
-    """ requests patent data from PatentsView API by date range"""
+    """requests patent data from PatentsView API by date range"""
     import json
     import requests
     endpoint_url = 'http://www.patentsview.org/api/patents/query'
@@ -178,17 +178,34 @@ def get_patents_by_month(begin_date, end_date, pats_per_page):
             # TODO (Lee) ? places.extend(results['results'])
             # TODO (Lee) ? time.sleep(2)
 
-def create_title_abstract_col(data):
-    for dictionary in data:
-        dictionary['patent_title_abstract'] = str([dictionary['patent_title'] + 
-                                                    '. ' + 
-                                                    dictionary['patent_abstract']][0])
-
 def trim_data(data, keys):
+    """subset fields returned from api response"""
     new_data = []
     for dictionary in data:
         new_data.append(dict((k, dictionary[k]) for k in keys if k in dictionary))
     return new_data
+
+def create_title_abstract_col(data):
+    """creates new col from title and abstract cols of api response"""
+    for dictionary in data:
+        dictionary['patent_title_abstract'] = str([dictionary['patent_title'] + 
+                                                    '. ' + 
+                                                    dictionary['patent_abstract']][0])
+    return data
+
+def structure_dataframe(data):
+    """ creates dataframe and organizes columns from dictionary"""
+    import pandas as pd
+    df = pd.DataFrame(data)
+    df = df[['patent_number', 'patent_date', 'patent_title_abstract']]
+    df.sort_values(by=['patent_date'], ascending=True, inplace=True)
+    return df
+
+def partition_dataframe(dataframe, train_pct):
+    len(dataframe)
+    text_train = dataframe[:round(len(dataframe)*train_pct)]
+    text_test = dataframe[round(len(dataframe)*train_pct):]
+    return text_train, text_test
 
 def tokenize_docs(docs):
     """convert words in corpus to word tokens"""
@@ -240,6 +257,3 @@ def convert_bytes(num, suffix='B'):
             return "%3.1f%s%s" % (num, unit, suffix)
         num /= 1024.0
     return "%.1f%s%s" % (num, 'Yi', suffix)
-
-
-
