@@ -1,3 +1,24 @@
+def get_patent_fields():
+    # return df from scraped retrievable patent fields for PatentsView API"
+    import requests
+    from bs4 import BeautifulSoup
+    import pandas as pd
+    url = "http://www.patentsview.org/api/patent.html"
+    page = requests.get(url)
+    l = []
+    
+    soup = BeautifulSoup(page.text, 'html.parser')
+    table = soup.find(class_='table table-striped documentation-fieldlist')
+    table_rows = table.find_all('tr')
+    
+    for tr in table_rows:
+        td = tr.find_all('td')
+        row = [tr.text for tr in td]
+        l.append(row)
+    
+    df = pd.DataFrame(l)
+    return df
+
 def get_ml_patents():
     """ builds api query for initial ml dataset"""
     import json
