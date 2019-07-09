@@ -23,7 +23,7 @@ def get_patent_fields_list():
             row = [tr.text for tr in td]
             l.append(row)
    
-    for row in l:
+    for row in l[1:]:
         l_fieldnames.append(row[0])
     return l_fieldnames
 
@@ -55,28 +55,7 @@ def get_patent_fields_df():
 
     df = pd.DataFrame(l)
     return df
-
-def get_patent_fields():
-    # return df from scraped retrievable patent fields for PatentsView API"
-    import requests
-    from bs4 import BeautifulSoup
-    import pandas as pd
-    url = "http://www.patentsview.org/api/patent.html"
-    page = requests.get(url)
-    l = []
-    
-    soup = BeautifulSoup(page.text, 'html.parser')
-    table = soup.find(class_='table table-striped documentation-fieldlist')
-    table_rows = table.find_all('tr')
-    
-    for tr in table_rows:
-        td = tr.find_all('td')
-        row = [tr.text for tr in td]
-        l.append(row)
-    
-    df = pd.DataFrame(l)
-    return df
-
+  
 def get_ml_patents():
     """ builds api query for initial ml dataset"""
     import json
@@ -98,92 +77,9 @@ def get_ml_patents():
     #             ,{"_text_phrase":{"patent_abstract":"machine learning"}}]}
     #         ,{"_and":
     #       [{"patent_year":2016}]}]}
-    pat_fields= ['assignee_city',
-    'assignee_country',
-    'assignee_county',
-    'assignee_county_fips',
-    'assignee_first_name',
-    'assignee_first_seen_date',
-    'assignee_id',
-    'assignee_last_name',
-    'assignee_last_seen_date',
-    'assignee_lastknown_city',
-    'assignee_lastknown_country',
-    'assignee_lastknown_latitude',
-    'assignee_lastknown_location_id',
-    'assignee_lastknown_longitude',
-    'assignee_lastknown_state',
-    'assignee_latitude',
-    'assignee_location_id',
-    'assignee_longitude',
-    'assignee_organization',
-    'assignee_sequence',
-    'assignee_state',
-    'assignee_state_fips',
-    'assignee_total_num_inventors',
-    'assignee_total_num_patents',
-    'assignee_type',
-    'cpc_category',
-    'cpc_first_seen_date',
-    'cpc_group_id',
-    'cpc_group_title',
-    'cpc_last_seen_date',
-    'cpc_section_id',
-    'cpc_sequence',
-    'cpc_subgroup_id',
-    'cpc_subgroup_title',
-    'cpc_subsection_id',
-    'cpc_subsection_title',
-    'cpc_total_num_assignees',
-    'cpc_total_num_inventors',
-    'cpc_total_num_patents',
-    'inventor_city',
-    'inventor_country',
-    'inventor_county',
-    'inventor_county_fips',
-    'inventor_first_name',
-    'inventor_first_seen_date',
-    'inventor_id',
-    'inventor_last_name',
-    'inventor_last_seen_date',
-    'inventor_lastknown_city',
-    'inventor_lastknown_country',
-    'inventor_lastknown_latitude',
-    'inventor_lastknown_location_id',
-    'inventor_lastknown_longitude',
-    'inventor_lastknown_state',
-    'inventor_latitude',
-    'inventor_location_id',
-    'inventor_longitude',
-    'inventor_sequence',
-    'inventor_state',
-    'inventor_state_fips',
-    'inventor_total_num_patents',
-    'patent_abstract',
-    'patent_date',
-    'patent_firstnamed_assignee_city',
-    'patent_firstnamed_assignee_country',
-    'patent_firstnamed_assignee_id',
-    'patent_firstnamed_assignee_latitude',
-    'patent_firstnamed_assignee_location_id',
-    'patent_firstnamed_assignee_longitude',
-    'patent_firstnamed_assignee_state',
-    'patent_firstnamed_inventor_city',
-    'patent_firstnamed_inventor_country',
-    'patent_firstnamed_inventor_id',
-    'patent_firstnamed_inventor_latitude',
-    'patent_firstnamed_inventor_location_id',
-    'patent_firstnamed_inventor_longitude',
-    'patent_firstnamed_inventor_state',
-    'patent_kind',
-    'patent_number',
-    'patent_processing_time',
-    'patent_title',
-    'patent_type',
-    'patent_year'
-    ]
+    pat_fields= get_patent_fields_list()
     fields=pat_fields
-    options={"per_page":2500}
+    options={"per_page":50}
     sort=[{"patent_date":"desc"}]
 
     params={'q': json.dumps(query),
@@ -194,15 +90,14 @@ def get_ml_patents():
     # request and results
     response = requests.get(endpoint_url, params=params)
     status = response.status_code
-    # print("status:", status)
     results = response.json()
+    print(results)
     count = results.get("count")
-    data = results['patents']
+    data_resp = results['patents']
     total_pats = results.get("total_patent_count")
-    # print("patents on current page:",count,';', "total patents:",total_pats)
-    return data
+    return data_resp
 
-def get_patents_by_month(begin_date,end_date, pats_per_page):
+def get_patents_by_month(begin_date, end_date, pats_per_page):
     """ requests patent data from PatentsView API by date range"""
     import json
     import requests
@@ -211,126 +106,7 @@ def get_patents_by_month(begin_date,end_date, pats_per_page):
     data = []
     results = {}
     count=1
-    pat_fields= ['assignee_city',
-    'assignee_country',
-    'assignee_county',
-    'assignee_county_fips',
-    'assignee_first_name',
-    'assignee_first_seen_date',
-    'assignee_id',
-    'assignee_last_name',
-    'assignee_last_seen_date',
-    'assignee_lastknown_city',
-    'assignee_lastknown_country',
-    'assignee_lastknown_latitude',
-    'assignee_lastknown_location_id',
-    'assignee_lastknown_longitude',
-    'assignee_lastknown_state',
-    'assignee_latitude',
-    'assignee_location_id',
-    'assignee_longitude',
-    'assignee_organization',
-    'assignee_sequence',
-    'assignee_state',
-    'assignee_state_fips',
-    'assignee_total_num_inventors',
-    'assignee_total_num_patents',
-    'assignee_type',
-    'cpc_category',
-    'cpc_first_seen_date',
-    'cpc_group_id',
-    'cpc_group_title',
-    'cpc_last_seen_date',
-    'cpc_section_id',
-    'cpc_sequence',
-    'cpc_subgroup_id',
-    'cpc_subgroup_title',
-    'cpc_subsection_id',
-    'cpc_subsection_title',
-    'cpc_total_num_assignees',
-    'cpc_total_num_inventors',
-    'cpc_total_num_patents',
-    'detail_desc_length',
-    'forprior_country',
-    'forprior_date',
-    'forprior_docnumber',
-    'forprior_kind',
-    'forprior_sequence',
-    'inventor_city',
-    'inventor_country',
-    'inventor_county',
-    'inventor_county_fips',
-    'inventor_first_name',
-    'inventor_first_seen_date',
-    'inventor_id',
-    'inventor_last_name',
-    'inventor_last_seen_date',
-    'inventor_lastknown_city',
-    'inventor_lastknown_country',
-    'inventor_lastknown_latitude',
-    'inventor_lastknown_location_id',
-    'inventor_lastknown_longitude',
-    'inventor_lastknown_state',
-    'inventor_latitude',
-    'inventor_location_id',
-    'inventor_longitude',
-    'inventor_sequence',
-    'inventor_state',
-    'inventor_state_fips',
-    'inventor_total_num_patents',
-    'lawyer_first_name',
-    'lawyer_first_seen_date',
-    'lawyer_id',
-    'lawyer_last_name',
-    'lawyer_last_seen_date',
-    'lawyer_organization',
-    'lawyer_sequence',
-    'lawyer_total_num_assignees',
-    'lawyer_total_num_inventors',
-    'lawyer_total_num_patents',
-    'nber_category_id',
-    'nber_category_title',
-    'nber_first_seen_date',
-    'nber_last_seen_date',
-    'nber_subcategory_id',
-    'nber_subcategory_title',
-    'nber_total_num_assignees',
-    'nber_total_num_inventors',
-    'nber_total_num_patents',
-    'patent_abstract',
-    'patent_date',
-    'patent_firstnamed_assignee_city',
-    'patent_firstnamed_assignee_country',
-    'patent_firstnamed_assignee_id',
-    'patent_firstnamed_assignee_latitude',
-    'patent_firstnamed_assignee_location_id',
-    'patent_firstnamed_assignee_longitude',
-    'patent_firstnamed_assignee_state',
-    'patent_firstnamed_inventor_city',
-    'patent_firstnamed_inventor_country',
-    'patent_firstnamed_inventor_id',
-    'patent_firstnamed_inventor_latitude',
-    'patent_firstnamed_inventor_location_id',
-    'patent_firstnamed_inventor_longitude',
-    'patent_firstnamed_inventor_state',
-    'patent_kind',
-    'patent_number',
-    'patent_processing_time',
-    'patent_title',
-    'patent_type',
-    'patent_year',
-    'pct_102_date',
-    'pct_371_date',
-    'pct_date',
-    'pct_docnumber',
-    'pct_doctype',
-    'pct_kind',
-    'rawinventor_first_name',
-    'rawinventor_last_name',
-    'wipo_field_id',
-    'wipo_field_title',
-    'wipo_sector_title',
-    'wipo_sequence']
+    pat_fields= get_patent_fields_list()
 
     query = {"_and":[{"_gte":{"patent_date":begin_date}},
     {"_lte":{end_date:"2019-01-01"}}]}
