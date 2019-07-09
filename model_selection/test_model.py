@@ -1,3 +1,61 @@
+def get_patent_fields_list():
+    """scrape patent fields that are retrievable from PatentsView API"""
+    import requests
+    from bs4 import Tag, NavigableString, BeautifulSoup
+    import pandas as pd
+    url = "http://www.patentsview.org/api/patent.html"
+    page = requests.get(url)
+    l = []
+    l_fieldnames = []
+    soup = BeautifulSoup(page.text, 'lxml')
+    table = soup.find(class_='table table-striped documentation-fieldlist')
+    table_rows = table.find_all('tr')
+    counter=0
+    for tr in table_rows:
+        if counter ==0:
+            th = tr.find_all('th')
+            row = [tr.text for tr in th]
+            l.append(row)
+            counter+=1
+        
+        elif counter>0:
+            td = tr.find_all('td')
+            row = [tr.text for tr in td]
+            l.append(row)
+   
+    for row in l:
+        l_fieldnames.append(row[0])
+    return l_fieldnames
+
+def get_patent_fields_df():
+    """return df from scraped patent fields that are
+     retrievable from PatentsView API"""
+    import requests
+    from bs4 import Tag, NavigableString, BeautifulSoup
+    import pandas as pd
+    url = "http://www.patentsview.org/api/patent.html"
+    page = requests.get(url)
+    l = []
+    
+    soup = BeautifulSoup(page.text, 'lxml')
+    table = soup.find(class_='table table-striped documentation-fieldlist')
+    table_rows = table.find_all('tr')
+    counter=0
+    for tr in table_rows:
+        if counter ==0:
+            th = tr.find_all('th')
+            row = [tr.text for tr in th]
+            l.append(row)
+            counter+=1
+        
+        elif counter>0:
+            td = tr.find_all('td')
+            row = [tr.text for tr in td]
+            l.append(row)
+
+    df = pd.DataFrame(l)
+    return df
+
 def get_patent_fields():
     # return df from scraped retrievable patent fields for PatentsView API"
     import requests
