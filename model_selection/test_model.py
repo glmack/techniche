@@ -211,6 +211,7 @@ def build_pipeline():
     import spacy
     nlp = spacy.load('en_core_web_sm')
     # nlp.add_pipe(token_stats, name="token_stats", first=True)
+    # nlp.add_pipe(tokenize, name="tokenize", first=True)
     return nlp
 
 def token_stats(doc):
@@ -220,8 +221,9 @@ def token_stats(doc):
 
 def process_docs(text_data):
     import spacy
+    nlp = spacy.load('en_core_web_sm')
     from nltk.corpus import stopwords
-    """process patent documents in pipeline"""
+    """pre-processes patent documents in pipeline"""
     nlp = build_pipeline()
     processed_docs = []
     stop_words = stopwords.words('/Users/lee/Documents/techniche/techniche/data/stopwords/english')
@@ -231,17 +233,18 @@ def process_docs(text_data):
 
         # Keep only words (no numbers, no punctuation).
         # Lemmatize tokens, remove punctuation and remove stopwords.
-        doc = [token for token in doc if token.is_alpha and not token.is_stop]
-
-        # Remove common words from a stopword list.
-        # doc = [token for token in doc if token not in stop_words]
+        doc = [token.text for token in doc if token.text.isalpha()]
+        # [token.text for token in doc]
+        doc = [token.lower() for token in doc]
+        # filter stopwords from nltk list of common stopwords
+        doc = [token for token in doc if token not in stop_words]
 
         # Add named entities, but only if they are a compound of more than word.
         # doc.extend([str(entity) for entity in ents if len(entity) > 1])
 
         processed_docs.append(doc)
 
-        return processed_docs.append(doc)
+    return processed_docs
 
 def tokenize_docs(docs):
     """convert words in corpus to word tokens"""
