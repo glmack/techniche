@@ -231,13 +231,15 @@ def process_docs(text_data):
 
         # Keep only words (no numbers, no punctuation).
         # Lemmatize tokens, remove punctuation and remove stopwords.
-        doc = [token.lemma_ for token in doc if token.is_alpha and not token.is_stop]
+        doc = [token for token in doc if token.is_alpha and not token.is_stop]
 
         # Remove common words from a stopword list.
         # doc = [token for token in doc if token not in stop_words]
 
         # Add named entities, but only if they are a compound of more than word.
         # doc.extend([str(entity) for entity in ents if len(entity) > 1])
+
+        processed_docs.append(doc)
 
         return processed_docs.append(doc)
 
