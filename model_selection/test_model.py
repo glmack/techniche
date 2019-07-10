@@ -207,6 +207,17 @@ def partition_dataframe(dataframe, train_pct):
     text_test = dataframe[round(len(dataframe)*train_pct):]
     return text_train, text_test
 
+def build_pipeline():
+    import spacy
+    nlp = spacy.load('en_core_web_sm')
+    nlp.add_pipe(token_stats, name="token_stats", first=True)
+    return nlp
+
+def token_stats(doc):
+    print("After tokenization, this doc has {} tokens.".format(len(doc)))
+    print("The part-of-speech tags are:", [token.pos_ for token in doc])
+    return doc
+
 def tokenize_docs(docs):
     """convert words in corpus to word tokens"""
     tokenized_docs = []
