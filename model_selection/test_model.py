@@ -296,3 +296,13 @@ def convert_bytes(num, suffix='B'):
             return "%3.1f%s%s" % (num, unit, suffix)
         num /= 1024.0
     return "%.1f%s%s" % (num, 'Yi', suffix)
+
+def pat_inv_map(data):
+    """ builds patent(idx) mapping to list of inventors for passing to at model"""
+    pat_inv_dict = {}
+    for patent in data:
+        idx = data.index(patent)
+        inventors = [inventor['inventor_id'] for inventor in patent['inventors']]
+        pat_number = int(patent['patent_number'])
+        pat_inv_dict[idx] = inventors
+    return pat_inv_dict
