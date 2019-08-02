@@ -8,8 +8,11 @@ from flask import Flask, request, render_template, jsonify
 
 with open('/Users/lee/Documents/techniche/techniche/data/model_lda_1.pkl', 'rb') as f:
     model = pickle.load(f)
-# instantiate Flask application
+
 app = Flask(__name__, static_url_path="https://www.techniche.app")
+
+if __name__ == '__main__':
+    app.run(port=5000, debug=True)
 
 @app.route('/')
 def index():
