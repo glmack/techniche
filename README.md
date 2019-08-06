@@ -1,15 +1,14 @@
-# techniche
+# techniche - yesterday’s patent is tomorrow’s business market. 
+Techniche offers machine learning-based decision support tools to help business users surface and evaluate market trends via statistical learning of the technical details of machine learning inventions that are described in the text and associated metadata of patent documents.
 
-Techniche is a suite of decision support tools to help business users evaluate the probability and significance of future market trends by using patent documents to predict granular technological specializations - tech niches - in machine learning markets. Techniche surfaces and evaluates data-driven market signals via statistical learning of the technical details of machine learning inventions described in the text of patent documents.
+### Business understanding
+Business decision-makers across finance, product and people teams require data on future market trends to reduce uncertainty and take actions to secure early-mover advantages. Techniche addresses this need by providing an additional data-driven signal to future market trends based on the patent pipeline of underlying machine learning technologies.
 
-### Business value
-Early-mover advantages depend on the ability of business decision-makers to acquire knowledge of the pipeline of machine learning technologies that might shape markets into the future.
-
-### Data sources
-Techniche learns from public patent documents of the United States Patent Organization (USPTO). Data is acquired from the USPTO PatentsView API and bulk downloads, and subsequently stored in an Amazon Web Services (AWS) cloud bucket and PostgreSQL database. While USPTO provides a graphical interface for retrieval and exploratory visualization of the patent data contained in the API, Techniche shares analytical insights of the full patent documents that are otherwise commonly limited to specialized research communities or paying customers of proprietary patent analytics databases. 
+### Data understanding
+Techniche learns from public patent documents of the United States Patent Organization (USPTO) that are made available through the PatentsView API at http://www.patentsview.org/api/doc.html. Interested users can explore this patent data via the graphical user interface at http://www.patentsview.org/query/. Techniche broadens access to analytical insights from patents, a data source that is more commonly limited to researchers or paying business customers of proprietary patent/intellectual property (IP) analytics databases.
 
 ### Data preparation
-Preprocessing techniques - tokenization, punctuation cleaning, and stemming and lemmatization - are applied to raw text data prior to introduction to models.
+Preprocessing techniques such as word tokenization and punctuation cleaning are applied to raw text data prior to introduction to models.
 
 ### Modeling
 Techniche predicts technological specializations as a supervised multi-class classification task using neural networks (CNN, RNN), as well as an unsupervised learning of latent technological topics using topical models (LDA). Techniche predicts technological significance as a supervised regression scoring task using neural network (CNN, RNN) models. Techniche leverages predictive power by combining pre-trained word-embeddings trained on generalized text with domain-specific training on patent texts.
