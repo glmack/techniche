@@ -348,7 +348,7 @@ def pat_inv_map(data):
 #     top_k_topics = [x[0] for x in topic_id[:k]]
 #     return [(i, model_lda.print_topic(i)) for i in top_k_topics]
 
-def get_topics(doc, model_lda, k=5):
-    topic_id = sorted(model_lda[doc][0], key=lambda x: -x[1])
+def get_topics(doc, model=model_lda, k=5):
+    topic_id = sorted(model[doc][0], key=lambda x: -x[1])
     top_k_topics = [x[0] for x in topic_id[:k]]
-    return [(i, model_lda.print_topic(i)) for i in top_k_topics]
+    return [(i, model.print_topic(i)) for i in top_k_topics]
