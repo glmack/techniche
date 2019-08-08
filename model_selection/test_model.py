@@ -87,7 +87,7 @@ def get_patent_fields_df():
     return df
 
 
-def get_ml_patents():
+def get_ml_patents(pats_per_page=100):
     """builds api query for initial ml dataset"""
     import json
     import requests
@@ -100,7 +100,8 @@ def get_ml_patents():
                   {"_text_phrase":{"patent_abstract":"computer vision"}}]}
     pat_fields = get_patent_fields_list()
     fields = pat_fields
-    options = {"per_page": 50}
+    pats_per_page
+    options = {"per_page": pats_per_page}
     sort = [{"patent_date": "desc"}]
 
     params = {'q': json.dumps(query),
