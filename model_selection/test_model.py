@@ -1,3 +1,33 @@
+# def get_patent_fields_list():
+#     """scrape patent fields that are retrievable from PatentsView API"""
+#     import requests
+#     from bs4 import Tag, NavigableString, BeautifulSoup
+#     import pandas as pd
+#     url = "http://www.patentsview.org/api/patent.html"
+#     page = requests.get(url)
+#     table = []
+#     table_fieldnames = []
+#     soup = BeautifulSoup(page.text, 'lxml')
+#     table = soup.find(class_='table table-striped documentation-fieldlist')
+#     table_rows = table.find_all('tr')
+#     counter = 0
+#     for tr in table_rows:
+#         if counter == 0:
+#             th = tr.find_all('th')
+#             row = [tr.text for tr in th]
+#             table.append(row)
+#             counter += 1
+
+#         elif counter > 0:
+#             td = tr.find_all('td')
+#             row = [tr.text for tr in td]
+#             table.append(row)
+
+#     for row in l[1:]:
+#         table_fieldnames.append(row[0])
+#     return table_fieldnames
+
+
 def get_patent_fields_list():
     """scrape patent fields that are retrievable from PatentsView API"""
     import requests
@@ -5,28 +35,27 @@ def get_patent_fields_list():
     import pandas as pd
     url = "http://www.patentsview.org/api/patent.html"
     page = requests.get(url)
-    table = []
-    table_fieldnames = []
+    l = []
+    l_fieldnames = []
     soup = BeautifulSoup(page.text, 'lxml')
     table = soup.find(class_='table table-striped documentation-fieldlist')
     table_rows = table.find_all('tr')
-    counter = 0
+    counter=0
     for tr in table_rows:
-        if counter == 0:
+        if counter ==0:
             th = tr.find_all('th')
             row = [tr.text for tr in th]
-            table.append(row)
-            counter += 1
-
-        elif counter > 0:
+            l.append(row)
+            counter+=1
+        
+        elif counter>0:
             td = tr.find_all('td')
             row = [tr.text for tr in td]
-            table.append(row)
-
+            l.append(row)
+   
     for row in l[1:]:
-        table_fieldnames.append(row[0])
-    return table_fieldnames
-
+        l_fieldnames.append(row[0])
+    return l_fieldnames
 
 def get_patent_fields_df():
     """return df from scraped patent fields that are
@@ -63,25 +92,12 @@ def get_ml_patents():
     import json
     import requests
     endpoint_url = 'http://www.patentsview.org/api/patents/query'
-    query = {"_or": [{"_text_phrase": {"patent_title": "natural language"}},
-                     {"_text_phrase": {"patent_abstract": "natural language"}},
-                     {"_text_phrase": {"patent_abstract": "machine learning"}},
-                     {"_text_phrase": {"patent_title": "machine learning"}},
-                     {"_text_phrase": {"patent_abstract": "computer vision"}},
-                     {"_text_phrase": {"patent_abstract": "computer vision"}}
-                     ]
-             }
-    # uncomment to use alternate query options
-    # query={"cpc_subgroup_id":"G06T3/4046"}
-    # query = {"_and":[{"_gte":
-    #                   {"patent_date":"2017-01-01"}},
-    #                   {"_lte":{"patent_date":"2017-01-31"}}]}
-    # query={"_and":
-    #         [{"_or":
-    #             [{"_text_phrase":{"patent_title":"machine learning"}}
-    #             ,{"_text_phrase":{"patent_abstract":"machine learning"}}]}
-    #         ,{"_and":
-    #       [{"patent_year":2016}]}]}
+    query={"_or":[{"_text_phrase":{"patent_title":"natural language"}},
+                  {"_text_phrase":{"patent_abstract":"natural language"}},
+                  {"_text_phrase":{"patent_abstract":"machine learning"}},
+                  {"_text_phrase":{"patent_title":"machine learning"}},
+                  {"_text_phrase":{"patent_abstract":"computer vision"}},
+                  {"_text_phrase":{"patent_abstract":"computer vision"}}]}
     pat_fields = get_patent_fields_list()
     fields = pat_fields
     options = {"per_page": 50}
