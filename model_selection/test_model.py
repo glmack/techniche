@@ -328,7 +328,7 @@ def pat_inv_map(data):
         idx = data.index(patent)
         inventors = [inventor['inventor_id']
                      for inventor in patent['inventors']]
-        pat_number = int(patent['patent_number'])
+        # pat_number = int(patent['patent_number'])
         pat_inv_dict[idx] = inventors
     return pat_inv_dict
 
