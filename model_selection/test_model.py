@@ -332,23 +332,7 @@ def pat_inv_map(data):
         pat_inv_dict[idx] = inventors
     return pat_inv_dict
 
-
-# def get_topics(doc, k=5, model):
-#     """predicts on new data for genism lda_model"""
-#     from gensim.models.ldamodel import LdaModel
-#     model = model_lda
-#     model_lda = LdaModel(corpus=corpus,id2word=id_to_word, num_topics=10, random_state=100, update_every=1, chunksize=100, passes=10, alpha='auto', per_word_topics=True)
-#     topic_id = sorted(model[doc][0], key=lambda x: -x[1])
-#     top_k_topics = [x[0] for x in topic_id[:k]]
-#     return [(i, model.print_topic(i)) for i in top_k_topics]
-
-# this is the original functioning function per ME
-# def get_topics(doc, k=5, model_lda=model_lda):
-#     topic_id = sorted(model_lda[doc][0], key=lambda x: -x[1])
-#     top_k_topics = [x[0] for x in topic_id[:k]]
-#     return [(i, model_lda.print_topic(i)) for i in top_k_topics]
-
-def get_topics(doc, model=model_lda, k=5):
+def get_topics(doc, model, k=5):
     topic_id = sorted(model[doc][0], key=lambda x: -x[1])
     top_k_topics = [x[0] for x in topic_id[:k]]
     return [(i, model.print_topic(i)) for i in top_k_topics]
