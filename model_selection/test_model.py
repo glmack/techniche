@@ -332,6 +332,7 @@ def pat_inv_map(data):
         pat_inv_dict[idx] = inventors
     return pat_inv_dict
 
+
 def get_topics(doc, model, k=5):
     topic_id = sorted(model[doc][0], key=lambda x: -x[1])
     top_k_topics = [x[0] for x in topic_id[:k]]
