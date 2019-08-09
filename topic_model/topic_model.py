@@ -1,4 +1,3 @@
-
 def get_patent_fields_list():
     """scrape patent fields that are retrievable from PatentsView API"""
     import requests
@@ -6,39 +5,37 @@ def get_patent_fields_list():
     import pandas as pd
     url = "http://www.patentsview.org/api/patent.html"
     page = requests.get(url)
-    table = []
-    table_fieldnames = []
+    l = []
+    l_fieldnames = []
     soup = BeautifulSoup(page.text, 'lxml')
     table = soup.find(class_='table table-striped documentation-fieldlist')
     table_rows = table.find_all('tr')
-    counter = 0
+    counter=0
     for tr in table_rows:
-        if counter == 0:
+        if counter ==0:
             th = tr.find_all('th')
             row = [tr.text for tr in th]
-            table.append(row)
-            counter += 1
-
-        elif counter > 0:
+            l.append(row)
+            counter+=1
+        
+        elif counter>0:
             td = tr.find_all('td')
             row = [tr.text for tr in td]
-            table.append(row)
-
+            l.append(row)
+   
     for row in l[1:]:
-        table_fieldnames.append(row[0])
-    return table_fieldnames
-
+        l_fieldnames.append(row[0])
+    return l_fieldnames
 
 def get_patent_fields_df():
-    """return df from scraped patent fields that are
-     retrievable from PatentsView API"""
+    """Scrapes and returns possible fields for patents endpoint
+       of PatentsView API"""
     import requests
     from bs4 import Tag, NavigableString, BeautifulSoup
     import pandas as pd
     url = "http://www.patentsview.org/api/patent.html"
     page = requests.get(url)
     table = []
-
     soup = BeautifulSoup(page.text, 'lxml')
     table = soup.find(class_='table table-striped documentation-fieldlist')
     table_rows = table.find_all('tr')
@@ -59,33 +56,21 @@ def get_patent_fields_df():
     return df
 
 
-def get_ml_patents():
+def get_ml_patents(pats_per_page=100):
     """builds api query for initial ml dataset"""
     import json
     import requests
     endpoint_url = 'http://www.patentsview.org/api/patents/query'
-    query = {"_or": [{"_text_phrase": {"patent_title": "natural language"}},
-                     {"_text_phrase": {"patent_abstract": "natural language"}},
-                     {"_text_phrase": {"patent_abstract": "machine learning"}},
-                     {"_text_phrase": {"patent_title": "machine learning"}},
-                     {"_text_phrase": {"patent_abstract": "computer vision"}},
-                     {"_text_phrase": {"patent_abstract": "computer vision"}}
-                     ]
-             }
-    # uncomment to use alternate query options
-    # query={"cpc_subgroup_id":"G06T3/4046"}
-    # query = {"_and":[{"_gte":
-    #                   {"patent_date":"2017-01-01"}},
-    #                   {"_lte":{"patent_date":"2017-01-31"}}]}
-    # query={"_and":
-    #         [{"_or":
-    #             [{"_text_phrase":{"patent_title":"machine learning"}}
-    #             ,{"_text_phrase":{"patent_abstract":"machine learning"}}]}
-    #         ,{"_and":
-    #       [{"patent_year":2016}]}]}
+    query={"_or":[{"_text_phrase":{"patent_title":"natural language"}},
+                  {"_text_phrase":{"patent_abstract":"natural language"}},
+                  {"_text_phrase":{"patent_abstract":"machine learning"}},
+                  {"_text_phrase":{"patent_title":"machine learning"}},
+                  {"_text_phrase":{"patent_abstract":"computer vision"}},
+                  {"_text_phrase":{"patent_abstract":"computer vision"}}]}
     pat_fields = get_patent_fields_list()
     fields = pat_fields
-    options = {"per_page": 50}
+    pats_per_page
+    options = {"per_page": pats_per_page}
     sort = [{"patent_date": "desc"}]
 
     params = {'q': json.dumps(query),
@@ -213,9 +198,7 @@ def trim_data(data, keys):
 def create_title_abstract_col(data):
     """creates new col from title and abstract cols of api response"""
     for dictionary in data:
-        dictionary['patent_title_abstract'] =
-        str([dictionary['patent_title'] +
-            '. ' + dictionary['patent_abstract']][0])
+        dictionary['patent_title_abstract'] = str([dictionary['patent_title'] + '. ' + dictionary['patent_abstract']][0])
     return data
 
 
@@ -345,12 +328,12 @@ def pat_inv_map(data):
         idx = data.index(patent)
         inventors = [inventor['inventor_id']
                      for inventor in patent['inventors']]
-        pat_number = int(patent['patent_number'])
+        # pat_number = int(patent['patent_number'])
         pat_inv_dict[idx] = inventors
     return pat_inv_dict
 
 
-def get_topics(doc, k=5, model_lda=model_lda):
-    topic_id = sorted(model_lda[doc][0], key=lambda x: -x[1])
+def get_topics(doc, model, k=5):
+    topic_id = sorted(model[doc][0], key=lambda x: -x[1])
     top_k_topics = [x[0] for x in topic_id[:k]]
-    return [(i, model_lda.print_topic(i)) for i in top_k_topics]\n
+    return [(i, model.print_topic(i)) for i in top_k_topics]
