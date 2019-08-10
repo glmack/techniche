@@ -1,3 +1,4 @@
+# c nun example
 <html>
 
 <head>
@@ -8,7 +9,6 @@ body{
     font-size: 14px;
     font-family: Helvetica;
 }
-
 a{
     color: #333;
 }
@@ -21,18 +21,15 @@ a.menu:hover{
 a:visited{
     color: #333;
 }
-
 li{
     list-style-type: none;
 }
-
 #panel{
     display:table-cell;
     width:65%;
     padding-right:2%;
     text-align: left;
 }
-
 button{
     background-color: #dadada;
     color: #113;
@@ -45,12 +42,10 @@ button{
 button.btn-ls{
     font-size: 1em;
 }
-
 div.example{
     margin-top: 2em;
     display: none;
 }
-
 pre{
     display: inline-block;
     padding: 1em;
@@ -61,11 +56,9 @@ pre{
     margin-top: 2em;
     width: 66%;
 }
-
 pre.html{
     padding: 0.5em;
 }
-
 .zone{
     margin-left: 5em;
     padding: 1em;
@@ -74,29 +67,24 @@ pre.html{
     border-style: solid;
     width: 20em;
 }
-
 code{
     font-family: Consolas, Courier New;
     color: #113;
     padding-left: 0.2em;
     padding-right: 0.2em;
 }
-
 code.file{
     background-color: #fff;
     font-weigth: bold;
     font-style: italic;
 }
-
 .up{
     font-size: 1.2em;
 }
 .down{
     font-size:0.8em;
 }
-
 /* colors for highlighted Python code */
-
 span.python-string{
     color: #6aa;
 }
@@ -153,10 +141,8 @@ span.python-builtin{
 
     <script type="text/python" id="script0">
     from browser import document, alert
-
     def hello(ev):
         alert("Hello !")
-
     document["button0"].bind("click", hello)
     </script>
 
@@ -186,10 +172,8 @@ span.python-builtin{
 
     <script type="text/python" id="script1">
     from browser import document
-
     def change(event):
         document["zone1"].textContent = "New content"
-
     document["button1"].bind("click", change)
     </script>
 
@@ -221,9 +205,7 @@ span.python-builtin{
 
     <script type="text/python" id="script2">
     from browser import document
-
     element = document["zone2"]
-
     def change(event):
         style = element.style
         color = style.color
@@ -231,7 +213,6 @@ span.python-builtin{
         style.backgroundColor = "gray" if color == "blue" else "#aad"
         style.fontWeight = "bold" if color == "blue" else "normal"
         style.fontSize = "18px" if color == "blue" else "14px"
-
     document["button2"].bind("click", change)
     </script>
 
@@ -253,10 +234,8 @@ span.python-builtin{
 
     <script type="text/python" id="script_class">
     from browser import document
-
     element = document["zone_class"]
     element.classList.add("down")
-
     def change_class(event):
         if "up" in element.classList:
             element.classList.remove("up")
@@ -264,7 +243,6 @@ span.python-builtin{
         else:
             element.classList.remove("down")
             element.classList.add("up")
-
     document["button_class"].bind("click", change_class)
     </script>
 
@@ -286,11 +264,9 @@ span.python-builtin{
 
     <script type="text/python"  id="script3">
     from browser import document
-
     def change(event):
         display = document["zone3"].style.display
         document["zone3"].style.display = "inline" if display == "none" else "none"
-
     document["button3"].bind("click", change)
     </script>
 
@@ -309,10 +285,8 @@ span.python-builtin{
 
     <script type="text/python" id="script6_std">
     from browser import document, html
-
     element = document.getElementById("zone6_std")
     nb = 0
-
     def change(event):
         global nb
         elt = document.createElement("B")
@@ -320,7 +294,6 @@ span.python-builtin{
         elt.appendChild(txt)
         element.appendChild(elt)
         nb += 1
-
     document["button6_std"].addEventListener("click", change)
     </script>
 
@@ -345,15 +318,12 @@ span.python-builtin{
 
     <script type="text/python" id="script6">
     from browser import document, html
-
     element = document["zone6"]
     nb = 0
-
     def change(event):
         global nb
         element <= html.B(f" {nb}")
         nb += 1
-
     document["button6"].bind("click", change)
     </script>
 
@@ -375,16 +345,13 @@ span.python-builtin{
 
     <script type="text/python" id="script61">
     from browser import document, html
-
     ul = document["zone61"].get(selector="ul")[0]
     element = ul.get(selector="li")[0]
     nb = 0
-
     def change(event):
         global nb
         nb += 1
         ul.insertBefore(html.LI(f"element before {nb}"), element)
-
     document["button61"].bind("click", change)
     </script>
 
@@ -405,16 +372,13 @@ span.python-builtin{
 
     <script type="text/python" id="script62">
     from browser import document, html
-
     ul = document["zone62"].get(selector="ul")[0]
     element = ul.get(selector="li")[0]
     nb = 0
-
     def change(event):
         global nb
         nb += 1
         ul.insertBefore(html.LI(f"element after {nb}"), element.nextSibling)
-
     document["button62"].bind("click", change)
     </script>
 
@@ -439,14 +403,11 @@ the end.
 
     <script type="text/python" id="script_elt_attr">
     from browser import document, html
-
     element = document["zone_elt_attr"]
-
     def insert(event):
         element <= html.SPAN("new text",
             style=dict(color="red", paddingLeft="1em"),
             Class="down")
-
     document["button_elt_attr"].bind("click", insert)
     </script>
 
@@ -471,20 +432,15 @@ the end.
     <script type="text/python" id="script7">
     from browser import document
     from browser.html import TABLE, TR, TH, TD
-
     def insert_table(event):
         table = TABLE()
-
         # header row
         table <= TR(TH(f"Column {i}") for i in range(5))
-
         # table rows
         for row in range(3):
             table <= TR(TD(f"Cell {row}-{i}") for i in range(5))
-
         document["zone7"].clear()
         document["zone7"] <= table
-
     document["button7"].bind("click", insert_table)
     </script>
 
@@ -509,18 +465,15 @@ the end.
 
     <script type="text/python" id="script12">
     from browser import document, alert, html
-
     def show(event):
         dropdown = event.target
         num = dropdown.selectedIndex
         alert("Selected: {}".format(dropdown.options[num].value))
-
     def insert_dropdown(event):
         document["zone12"] <= "Your choice : "
         dropdown = html.SELECT(html.OPTION(f"Choice {i}") for i in range(5))
         dropdown.bind("change", show)
         document["zone12"] <= dropdown
-
     document["button12"].bind("click", insert_dropdown)
     </script>
 
@@ -554,19 +507,15 @@ the second argument.
     <script type="text/python" id="script8">
     from browser import document, html
     import math
-
     canvas = document["zone8"]
     ctx = canvas.getContext("2d")
-
     x = 20
-
     def draw(event):
         global x
         ctx.beginPath()
         ctx.arc(x, 25, 15, 0, 2 * math.pi)
         x += 15
         ctx.stroke()
-
     document["button8"].bind("click", draw)
     </script>
 
@@ -586,13 +535,10 @@ the second argument.
 
     <script type="text/python"  id="script9">
     from browser import document, html
-
     logo = "https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"
-
     def insert_image(event):
         document["zone9"].clear()
         document["zone9"] <= html.IMG(src=logo, height=50)
-
     document["button9"].bind("click", insert_image)
     </script>
 </div>
@@ -614,7 +560,6 @@ the second argument.
 
     <script type="text/python" id="script16">
     from browser import document, html
-
     def show_values(event):
         input = document["input16"].value
         select = document["select16"]
@@ -625,7 +570,6 @@ the second argument.
             html.BR(), f"Selected option: {option}",
             html.BR(), f"Value in TEXTAREA field: {text}"
             )
-
     document["button16"].bind("click", show_values)
     </script>
 
@@ -641,19 +585,15 @@ the second argument.
 
     <script type="text/python" id="script13">
     from browser import document, html
-
     def change(event):
         # clear the zone
         document["zone13"].clear()
-
         # get a list of all BUTTON elements
         buttons = document.select("button")
         document["zone13"] <= "On this page there are {} buttons ".format(len(buttons))
-
         # get a list of all tags with class "zone"
         zones = document.select(".zone")
         document["zone13"] <= "and {} elements with class 'zone'".format(len(zones))
-
     document["button13"].bind("click", change)
     </script>
 
@@ -675,15 +615,12 @@ the second argument.
 
     <script type="text/python" id="script14">
     from browser import document, html
-
     moving = document["rot14"]
     angle = 10
-
     def change(event):
         global angle
         moving.style.transform = f"rotate({angle}deg)"
         angle += 10
-
     document["button14"].bind("click", change)
     </script>
 
@@ -705,12 +642,10 @@ the second argument.
 
     <script type="text/python" id="script15">
     from browser import document, window
-
     moving = document["rot15"]
     x = 0
     dx = 3
     run = None
-
     def change(event):
         global run
         if run is None:
@@ -720,9 +655,7 @@ the second argument.
             # stop animation
             window.cancelAnimationFrame(run)
             run = None
-
     document["button15"].bind("click", change)
-
     def render():
         global x, dx
         moving.style.transform = "translate({}px,0)".format(x)
@@ -733,7 +666,6 @@ the second argument.
         elif x <= 0:
             dx = -dx
             moving.html = "&#9658;" # right triangle
-
     def animloop(t):
         global run
         run = window.requestAnimationFrame(animloop)
@@ -762,9 +694,7 @@ the second argument.
 
     <script type="text/python"  id="script_mousemove">
     from browser import document
-
     class ElementMove:
-
         def __init__(self, moving):
             """Make "moving" element movable with the mouse"""
             self.moving = moving
@@ -773,7 +703,6 @@ the second argument.
             self.moving.bind("mousemove", self.move)
             self.moving.bind("mouseup", self.stop)
             moving.style.cursor = "move"
-
         def start(self, event):
             """When user clicks on the moving element, set boolean is_moving
             to True and store mouse and moving element positions"""
@@ -782,20 +711,16 @@ the second argument.
             self.elt_pos = [self.moving.left, self.moving.top]
             # prevent default behaviour to avoid selecting the moving element
             event.preventDefault()
-
         def move(self, event):
             """User moves the mouse"""
             if not self.is_moving:
                 return
-
             # set new moving element coordinates
             self.moving.left = self.elt_pos[0] + event.x - self.mouse_pos[0]
             self.moving.top = self.elt_pos[1] + event.y - self.mouse_pos[1]
-
         def stop(self, event):
             """When user releases the mouse button, stop moving the element"""
             self.is_moving = False
-
     ElementMove(document["moving"])
     </script>
 
@@ -817,9 +742,7 @@ the second argument.
     <script type="text/python"  id="script_ls">
     from browser import document, window
     from browser.html import TABLE, TR, TD, INPUT, BUTTON
-
     zone = document["zone_ls"]
-
     """Test if the browser supports local storage"""
     try:
         storage = window.localStorage
@@ -827,7 +750,6 @@ the second argument.
         storage.removeItem("x")
     except:
         storage = None
-
     def action(ev):
         """User clicked on "add" or "remove" button"""
         button = ev.target
@@ -841,22 +763,18 @@ the second argument.
                 storage.setItem(key, value)
         # refresh table
         show()
-
     def update_value(ev):
         """If a value field has been modified, update storage"""
         row = ev.target.closest("TR")
         key = row.get(selector="TD")[0].text
         value = row.get(selector="INPUT")[0].value
         storage.setItem(key, value)
-
     def show(*args):
         """Shows the data stored locally, add buttons to add / remove items"""
         zone.clear()
-
         if storage is None:
             zone <= "No local storage for this browser"
             return
-
         table = TABLE()
         for i in range(storage.length):
             key = storage.key(i)
@@ -865,15 +783,11 @@ the second argument.
             value_field.bind("change", update_value)
             table <= TR(TD(key) + TD(value_field)+
                 TD(BUTTON("remove", Class="btn-ls")))
-
         table <= TR(TD(INPUT()) + TD(INPUT()) +
             TD(BUTTON("add", Class="btn-ls")))
-
         zone <= table
-
         for button in document["zone_ls"].get(selector="button"):
             button.bind("click", action)
-
     document["button_ls"].bind("click", show)
     </script>
 
@@ -895,10 +809,8 @@ the second argument.
 
     <script type="text/python"  id="script10">
     from browser import document, ajax
-
     url = "http://api.open-notify.org/iss-now.json"
     msg = "Position of the International Space Station at {}: {}"
-
     def complete(request):
         import json
         import datetime
@@ -907,20 +819,16 @@ the second argument.
         ts = data["timestamp"]
         now = datetime.datetime.fromtimestamp(ts)
         document["zone10"].text = msg.format(now, position)
-
     def click(event):
         req = ajax.ajax()
         req.open("GET", url, True)
         req.bind("complete", complete)
         document["zone10"].text = "waiting..."
         req.send()
-
     document["button10"].bind("click", click)
     </script>
 
     <p>
-    <i>Warning: this demo only works if this page (demo.html) is served in
-    http, not https.</i>
     <pre class="python"></pre>
     <p>
 
@@ -936,7 +844,6 @@ the second argument.
 
     <script type="text/python" id="script5">
     from browser import document
-
     document["button5"].bind("click", lambda ev: print("Hello !"))
     </script>
 
@@ -981,7 +888,6 @@ the second argument.
     <script type="text/python" id="script18">
     from browser import document, window, html
     parser = window.DOMParser.new()
-
     def show(node, container):
         if hasattr(node, "tagName"):
             container <= html.STRONG(node.tagName)
@@ -991,16 +897,12 @@ the second argument.
                 show(child, ul)
         elif node.text.strip():
             container <= html.LI(node.text)
-
     def show_xml(ev):
         # XML source is in a hidden element "catalog" in this page
         src = document["catalog"].html
         tree = parser.parseFromString(src, "application/xml")
-
         root = tree.firstChild
-
         show(root, document["zone18"])
-
     document["button18"].bind("click", show_xml)
     </script>
 
@@ -1020,15 +922,12 @@ the second argument.
     <span id="zone11" class="zone"></span>
 
     <script type="text/python" id="script11">
-    from browser import document
-    import javascript
-
+    from browser import document, window
     def show_date(event):
-        date = javascript.Date.new()
+        date = window.Date.new()
         document["zone11"].text = "{}-{:02}-{:02} at {:02}:{:02}:{:02}".format(
             date.getFullYear(), date.getMonth()+1, date.getDate(),
             date.getHours(), date.getMinutes(), date.getSeconds())
-
     document["button11"].bind("click", show_date)
     </script>
 
@@ -1037,18 +936,10 @@ the second argument.
     <p>
 
     <span class="comment">
-    Brython provides the modules <code class="module">time</code> and
-    <code class="module">datetime</code> of the standard distribution, but it
-    can also interact with the objects defined by Javascript.
-    <p>To use such objects, import the module <code class="module">javascript</code>:
-    it is used to get a reference objects defined by the Javascript language.
-    <p>Because the Javascript object <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank"><code>Date</code></a>
-    is a constructor (ie a function that returns new objects with the syntax
-    <i>var date = new Date()</i>), we create Brython objects with the
-    attribute <code>new</code>.
-    <p>We then use the attributes of the Javascript instance of
-    <code>Date()</code> such as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear" target="_blank"><code>getFullYear</code></a>
-    with the usual Python syntax.
+    Brython provides the modules <code class="module">time</code> and <code class="module">datetime</code> of the standard distribution, but it can also interact with the objects defined by Javascript.
+    <p>To use such objects, import the object <code>window</code> from module <code class="module">browser</code> : it is used to get a reference to all the objects defined in the Javascript global namespace.
+    <p>Because the Javascript object <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank"><code>Date</code></a> is a constructor (ie a function that returns new objects with the syntax <i>var date = new Date()</i>), we create Brython objects with the attribute <code>new</code>.
+    <p>We then use the attributes of the Javascript instance of <code>Date()</code> such as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear" target="_blank"><code>getFullYear</code></a> with the usual Python syntax.
     </span>
 </div>
 
@@ -1057,13 +948,10 @@ the second argument.
     <span id="zone17" class="zone"></span>
 
     <script type="text/python" id="script17">
-    from browser import document
-    import javascript
-
+    from browser import document, window
     def change(event):
-        s = javascript.String.new("abracadabra")
-        document["zone17"].text = s.replace(javascript.RegExp.new("a", "g"), "i")
-
+        s = window.String.new("abracadabra")
+        document["zone17"].text = s.replace(window.RegExp.new("a", "g"), "i")
     document["button17"].bind("click", change)
     </script>
 
@@ -1072,19 +960,14 @@ the second argument.
     <p>
 
     <span class="comment">
-    Similarly, Brython provides the standard Python module
-    <code class="module">re</code> for regular expressions, but it can also
-    use the Javascript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">RegExp</a> 
-    and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a> classes.
+    Similarly, Brython provides the standard Python module <code class="module">re</code> for regular expressions, but it can also use the Javascript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">RegExp</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a> classes.
     </span>
 </div>
 
 
 <script type="text/python">
 from browser import document, html, highlight
-
 # create first menu entry
-
 def home(ev):
     global current
     if current is not None:
@@ -1097,13 +980,10 @@ def home(ev):
     document["panel"] <= document[example_id]
     document[example_id].style.display="block"
     current = example_id
-
 anchor = html.A("Home", Class="menu", href="#", id="ahome")
 anchor.bind("click", home)
-
 document["menu"] <= html.LI(anchor)
 current = "home"
-
 def load_example(ev):
     global current
     if current is not None:
@@ -1116,7 +996,6 @@ def load_example(ev):
     document["panel"] <= document[example_id]
     document[example_id].style.display="block"
     current = example_id
-
 for example in document.get(selector=".example"):
     # add the Python source inside the example
     script = example.get(selector="script")[0]
@@ -1133,18 +1012,14 @@ for example in document.get(selector=".example"):
         code_elt[0].html = src.html
     else:
         example <= src
-
     # create a menu entry
     button = example.get(selector="button")[0]
     anchor = html.A(button.text, Class="menu", href="#", id="a"+example.id)
     anchor.num = example.id
-
     anchor.bind("click", load_example)
     document["menu"] <= html.LI(anchor)
-
     # hide the element
     example.style.display = "none"
-
 </script>
 <script src="brython.js"></script>
 <script src="brython_stdlib.js"></script>
