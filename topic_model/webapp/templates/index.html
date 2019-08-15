@@ -43,7 +43,7 @@
         req.set_header('content-type','application/json')
         data = json.dumps({'user_input': document['user_input'].value})
         req.send(data)
-    document["predict_button"].bind("click", get_prediction)
+    document["submit"].bind("click", get_prediction)
   </script>
   
   <!-- Navigation -->
@@ -85,7 +85,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">Patent signals for decision-makers in tomorrow’s business market</h2>
+          <h2 class="text-white mb-4">Patent signals for business decisions</h2>
           <p class="text-white-50">Techniche offers machine learning-based decision support tools to help business users surface and evaluate market trends via statistical learning of the technical details of machine learning inventions that are described in the text and associated metadata of
             <a href="http://http://www.patentsview.org/query/">patent documents</a>.</p>
         </div>
