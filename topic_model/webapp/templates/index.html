@@ -41,7 +41,7 @@
         req.bind('complete', show_results)
         req.open('POST', '/predict', True)
         req.set_header('content-type','application/json')
-        data = json.dumps({'user_input': document['user_input'].value})
+        data = json.dumps({'inputEmail': document['inputEmail'].value})
         req.send(data)
     document["submit"].bind("click", get_prediction)
   </script>
@@ -108,7 +108,7 @@
             <h4>Tech</h4>
             <p class="text-black-50 mb-0">Recommend relevant machine learning technology knowledge to developers and R&D science teams</p>
             <form class="form-inline d-flex">
-              <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter text describing technology space">
+              <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter text">
               <button type="submit" class="btn btn-primary mx-auto">Recommend</button>
             </form>
           </div>
