@@ -21,6 +21,9 @@
   <!-- Custom styles for this template -->
   <link href="css/grayscale.min.css" rel="stylesheet">
 
+  <script type="text/javascript" src="brython.js"></script>
+  <script type="text/javascript" src="brython_stdlib.js"></script>
+
 </head>
 
 # <body id="page-top">
@@ -41,9 +44,9 @@
         req.bind('complete', show_results)
         req.open('POST', '/predict', True)
         req.set_header('content-type','application/json')
-        data = json.dumps({'inputEmail': document['inputEmail'].value})
+        data = json.dumps({'user_input': document['user_input'].value})
         req.send(data)
-    document["submit"].bind("click", get_prediction)
+    document["submit_input"].bind("click", get_prediction)
   </script>
   
   <!-- Navigation -->
@@ -107,10 +110,11 @@
           <div class="featured-text text-center text-lg-left">
             <h4>Tech</h4>
             <p class="text-black-50 mb-0">Recommend relevant machine learning technology knowledge to developers and R&D science teams</p>
-            <form class="form-inline d-flex">
-              <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter text">
-              <button type="submit" class="btn btn-primary mx-auto">Recommend</button>
-            </form>
+            <div class="form-inline d-flex">
+              <input id="user_input" type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" placeholder="Enter text">
+              <button id="submit_input" type="submit" class="btn btn-primary mx-auto">Recommend</button>
+              <div id="result"></div>
+            </div>
           </div>
         </div>
       </div>
