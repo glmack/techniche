@@ -1,5 +1,5 @@
-# techniche - yesterday’s patent is tomorrow’s business market. 
-Techniche offers machine learning-based decision support tools to help business users surface and evaluate market trends via statistical learning of the technical details of machine learning inventions that are described in the text and associated metadata of patent documents.
+# techniche - machine learning-based patent signals for business decisions 
+Techniche offers machine learning-based decision support tools to help business users surface technology ideas via statistical learning of the technical details of machine learning inventions that are described in the text and associated metadata of patent documents.
 
 ### Business understanding
 Business decision-makers across finance, product and people teams require data on future market trends to reduce uncertainty and validate strategies to secure early-mover advantages. Techniche addresses this need by providing an additional data-driven signal to future market trends based on the patent pipeline of underlying machine learning technologies.
