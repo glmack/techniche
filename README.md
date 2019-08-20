@@ -1,10 +1,10 @@
 # techniche
 
-### Machine learning-based patent signals for business decisions 
-Techniche offers machine learning-based decision support tools to help business users surface technology ideas from patent documents for machine-learning inventions.
+#### Machine learning-based patent signals for technology decisions 
+Techniche offers machine learning-based decision support tools to help business users surface technology ideas from patent documents for machine learning inventions.
 
 ### Business understanding
-Business decision-makers across finance, product and people teams require data on future market trends to reduce uncertainty and validate strategies to secure early-mover advantages. Techniche addresses this need by providing an additional data-driven signal to future market trends based on the patent pipeline of underlying machine learning technologies.
+Technology decision-makers - in R&D, people and product - require data to make choices in markets shaped by machine-learning technologies. Techniche recommends technologies based on the patent pipeline of underlying machine learning technologies.
 
 ### Data
 #### Data understanding
