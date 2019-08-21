@@ -1,5 +1,5 @@
 def get_patent_fields_list():
-    """scrape patent fields that are retrievable from PatentsView API"""
+    """Scrape patent fields that are retrievable from PatentsView API"""
     import requests
     from bs4 import Tag, NavigableString, BeautifulSoup
     import pandas as pd
@@ -28,7 +28,7 @@ def get_patent_fields_list():
     return l_fieldnames
 
 def get_patent_fields_df():
-    """Scrapes and returns possible fields for patents endpoint
+    """Scrape and return possible fields for patents endpoint
        of PatentsView API"""
     import requests
     from bs4 import Tag, NavigableString, BeautifulSoup
@@ -57,7 +57,7 @@ def get_patent_fields_df():
 
 
 def get_ml_patents(pats_per_page=100):
-    """builds api query for initial ml dataset"""
+    """Build api query for initial ml dataset"""
     import json
     import requests
     endpoint_url = 'http://www.patentsview.org/api/patents/query'
@@ -90,7 +90,7 @@ def get_ml_patents(pats_per_page=100):
 
 
 def get_patents_by_month(begin_date, end_date, pats_per_page):
-    """requests patent data from PatentsView API by date range"""
+    """Request patent data from PatentsView API by date range"""
     import json
     import requests
     endpoint_url = 'http://www.patentsview.org/api/patents/query'
@@ -187,7 +187,7 @@ def get_patents_by_month(begin_date, end_date, pats_per_page):
 
 
 def trim_data(data, keys):
-    """subset fields returned from api response"""
+    """Subset fields returned from api response"""
     new_data = []
     for dictionary in data:
         new_data.append(
@@ -196,14 +196,14 @@ def trim_data(data, keys):
 
 
 def create_title_abstract_col(data):
-    """creates new col from title and abstract cols of api response"""
+    """Create new col from title and abstract cols of api response"""
     for dictionary in data:
         dictionary['patent_title_abstract'] = str([dictionary['patent_title'] + '. ' + dictionary['patent_abstract']][0])
     return data
 
 
 def structure_dataframe(data):
-    """ creates dataframe and organizes columns from dictionary"""
+    """Create dataframe and organizes columns from dictionary"""
     import pandas as pd
     df = pd.DataFrame(data)
     df = df[['patent_number', 'patent_date', 'patent_title_abstract']]
@@ -212,6 +212,7 @@ def structure_dataframe(data):
 
 
 def partition_dataframe(dataframe, train_pct):
+    """Partition dataframe"""
     len(dataframe)
     text_train = dataframe[:round(len(dataframe)*train_pct)]
     text_test = dataframe[round(len(dataframe)*train_pct):]
@@ -219,6 +220,7 @@ def partition_dataframe(dataframe, train_pct):
 
 
 def build_pipeline():
+    """Build pipeline in spacy framework"""
     import spacy
     nlp = spacy.load('en_core_web_sm')
     # nlp.add_pipe(token_stats, name="token_stats", first=True)
@@ -227,16 +229,17 @@ def build_pipeline():
 
 
 def token_stats(doc):
+    """Display tokenization stats"""
     print("After tokenization, this corpus has {} tokens.".format(len(doc)))
     print("The part-of-speech tags are:", [token.pos_ for token in doc])
     return doc
 
 
 def process_docs(text_data):
+    """Pre-processes patent documents in pipeline"""
     import spacy
     nlp = spacy.load('en_core_web_sm')
     from nltk.corpus import stopwords
-    """pre-processes patent documents in pipeline"""
     nlp = build_pipeline()
     processed_docs = []
     stop_words = stopwords.words(
@@ -262,7 +265,7 @@ def process_docs(text_data):
 
 
 def tokenize_docs(docs):
-    """convert words in corpus to word tokens"""
+    """Convert words in corpus to word tokens"""
     tokenized_docs = []
     for doc in docs:
         tokenized_docs.append(word_tokenize(doc))
@@ -270,7 +273,7 @@ def tokenize_docs(docs):
 
 
 def clean_docs(tokenized_docs):
-    """clean corpus of punctuation"""
+    """Clean corpus of punctuation"""
     clean_docs = []
     for doc in tokenized_docs:
         clean_docs.append([word for word in doc if word.isalpha()])
@@ -278,7 +281,7 @@ def clean_docs(tokenized_docs):
 
 
 def lower_words(docs):
-    """convert words in corpusto lowercase"""
+    """Convert words in corpus to lowercase"""
     lowered_words = []
     for doc in docs:
         lowered_words.append([word.lower() for word in doc])
@@ -286,7 +289,7 @@ def lower_words(docs):
 
 
 def remove_stopwords(clean_docs):
-    """remove standard stopwords from corpus"""
+    """Remove standard stopwords from corpus"""
     filtered_docs = []
     for doc in clean_docs:
         filtered_docs.append([word for word in doc if word not in stop_words])
@@ -294,17 +297,17 @@ def remove_stopwords(clean_docs):
 
 
 def bigrams(docs):
-    """create bigrams from corpus"""
+    """Create bigrams from corpus"""
     return [bigram_model[doc] for doc in docs]
 
 
 def trigrams(docs):
-    """create trigrams from corpus"""
+    """Create trigrams from corpus"""
     return [trigram_model[bigram_model[doc]] for doc in docs]
 
 
 def lemmatize_docs(docs, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']):
-    """lemmatize documents"""
+    """Lemmatize documents"""
     lemmatized_docs = []
     for doc in docs:
         lemmatized_docs.append(
@@ -313,7 +316,7 @@ def lemmatize_docs(docs, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']):
 
 
 def convert_bytes(num, suffix='B'):
-    """ convert bytes int to int in aggregate units"""
+    """Convert bytes int to int in aggregate units"""
     for unit in ['', 'K', 'M', 'G', 'T', 'P', 'E', 'Z']:
         if abs(num) < 1024.0:
             return "%3.1f%s%s" % (num, unit, suffix)
@@ -322,7 +325,7 @@ def convert_bytes(num, suffix='B'):
 
 
 def pat_inv_map(data):
-    """builds patent(idx) mapping to list of inventors for a-t model"""
+    """Build patent(idx) mapping to list of inventors for a-t model"""
     pat_inv_dict = {}
     for patent in data:
         idx = data.index(patent)
@@ -334,6 +337,7 @@ def pat_inv_map(data):
 
 
 def get_topics(doc, model, k=5):
+    """Predict most important topics in new document"""
     topic_id = sorted(model[doc][0], key=lambda x: -x[1])
     top_k_topics = [x[0] for x in topic_id[:k]]
     return [(i, model.print_topic(i)) for i in top_k_topics]

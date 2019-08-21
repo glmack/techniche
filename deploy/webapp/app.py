@@ -20,9 +20,9 @@ def index():
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
-    """Return a prediction of topics"""
+    """Return prediction of important topics in new text string"""
     data = request.json
     prediction = get_topics(id_to_word.doc2bow([data['user_input']]),
                             model,
-                            k=15)
+                            k=3)
     return jsonify({'prediction': prediction})
