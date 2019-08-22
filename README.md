@@ -12,6 +12,8 @@ Techniche learns from public patent documents of the United States Patent Organi
 ##### Data preparation
 Natural language pre-processing techniques such as word tokenization and punctuation cleaning are applied to raw text data from patent titles and summary descriptions prior to introduction to models.
 
+Explore notebooks detailing data preparation and modeling in topic_model.ipynb and rec_system.ipynb of the model selection directory.
+
 #### Modeling
 Techniche will make recommendations using a hybrid recommender system. At the current stage of development, a collaborative filtering recommender component uses matrix factorization based on the Spark implementation of alternating least squares (ALS). A content-based recommender component, currently under development, addresses the cold start problem associated with making predictions for new users and items. The recommender will use text-based document (item) similarity metrics and also elicit user preferences through the web app. Latent Dirichlet Allocation (LDA), an unsupervised set of topic models is explored to generate the probable range of topics expressed in patent documents for machine learning-based inventions.
 
