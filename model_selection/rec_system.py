@@ -10,6 +10,9 @@ def int_to_alphanum(string):
 
 def get_pat_recs(patent_number, cosine_sim=cosine_sim):
     """take user input of string and output most similar documents"""
+    from sklearn.metrics.pairwise import linear_kernel
+    cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+
     # get idx of patent_number that matches text
     idx = indices[patent_number]
 
