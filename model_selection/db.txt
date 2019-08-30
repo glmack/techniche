@@ -1,0 +1,742 @@
+** Message: 18:18:30.563: 4 threads created
+** Message: 18:18:30.570: Creating database `PatentsView_20190312`
+** Message: 18:18:30.578: Creating table `PatentsView_20190312`.`nber`
+** Message: 18:18:30.729: Creating table `PatentsView_20190312`.`patent`
+** Message: 18:18:31.603: Creating table `PatentsView_20190312`.`temp_ipcr_aggregations`
+** Message: 18:18:31.688: Creating table `PatentsView_20190312`.`usapplicationcitation`
+** Message: 18:18:31.802: Creating table `PatentsView_20190312`.`cpc_current_group`
+** Message: 18:18:31.956: Creating table `PatentsView_20190312`.`inventor_nber_subcategory`
+** Message: 18:18:32.084: Creating table `PatentsView_20190312`.`inventor`
+** Message: 18:18:32.243: Creating table `PatentsView_20190312`.`inventor_uspc_mainclass`
+** Message: 18:18:32.367: Creating table `PatentsView_20190312`.`government_organization`
+** Message: 18:18:32.683: Creating table `PatentsView_20190312`.`nber_category`
+** Message: 18:18:32.765: Creating table `PatentsView_20190312`.`assignee_inventor`
+** Message: 18:18:32.879: Creating table `PatentsView_20190312`.`temp_mainclass_current_title`
+** Message: 18:18:32.962: Creating table `PatentsView_20190312`.`patent_examiner`
+** Message: 18:18:33.054: Creating table `PatentsView_20190312`.`cpc_subgroup`
+** Message: 18:18:33.137: Creating table `PatentsView_20190312`.`temp_lawyer_num_assignees`
+** Message: 18:18:33.219: Creating table `PatentsView_20190312`.`assignee_uspc_mainclass`
+** Message: 18:18:33.333: Creating table `PatentsView_20190312`.`cpc_current_copy`
+** Message: 18:18:33.538: Creating table `PatentsView_20190312`.`cpc_current`
+** Message: 18:18:33.737: Creating table `PatentsView_20190312`.`temp_cpc_subgroup_title`
+** Message: 18:18:33.822: Creating table `PatentsView_20190312`.`temp_nber_subcategory_aggregate_counts`
+** Message: 18:18:33.906: Creating table `PatentsView_20190312`.`temp_patent_date`
+** Message: 18:18:33.989: Creating table `PatentsView_20190312`.`uspatentcitation`
+** Message: 18:18:34.082: Creating table `PatentsView_20190312`.`assignee_nber_subcategory`
+** Message: 18:18:34.195: Creating table `PatentsView_20190312`.`inventor_cpc_group`
+** Message: 18:18:34.313: Creating table `PatentsView_20190312`.`foreignpriority`
+** Message: 18:18:34.438: Creating table `PatentsView_20190312`.`ipcr`
+** Message: 18:18:34.595: Creating table `PatentsView_20190312`.`temp_inventor_lastknown_location`
+** Message: 18:18:34.682: Creating table `PatentsView_20190312`.`assignee_cpc_subsection`
+** Message: 18:18:34.805: Creating table `PatentsView_20190312`.`patent_lawyer`
+** Message: 18:18:34.903: Creating table `PatentsView_20190312`.`uspc_current_mainclass_patent_year`
+** Message: 18:18:34.995: Creating table `PatentsView_20190312`.`temp_id_mapping_location_transformed`
+** Message: 18:18:35.102: Creating table `PatentsView_20190312`.`temp_id_mapping_assignee`
+** Message: 18:18:35.201: Creating table `PatentsView_20190312`.`temp_num_foreign_documents_cited`
+** Message: 18:18:35.288: Creating table `PatentsView_20190312`.`location_cpc_subsection`
+** Message: 18:18:35.411: Creating table `PatentsView_20190312`.`location_assignee`
+** Message: 18:18:35.595: Creating table `PatentsView_20190312`.`uspc_mainclass`
+** Message: 18:18:35.719: Creating table `PatentsView_20190312`.`application`
+** Message: 18:18:35.837: Creating table `PatentsView_20190312`.`temp_id_mapping_examiner`
+** Message: 18:18:35.924: Creating table `PatentsView_20190312`.`inventor_cpc_subsection`
+** Message: 18:18:36.039: Creating table `PatentsView_20190312`.`cpc_current_group_copy`
+** Message: 18:18:36.142: Creating table `PatentsView_20190312`.`temp_inventor_years_active`
+** Message: 18:18:36.236: Creating table `PatentsView_20190312`.`temp_assignee_num_patents`
+** Message: 18:18:36.319: Creating table `PatentsView_20190312`.`temp_cpc_current_group_aggregate_counts`
+** Message: 18:18:36.400: Creating table `PatentsView_20190312`.`cpc_current_subsection`
+** Message: 18:18:36.597: Creating table `PatentsView_20190312`.`wipo_field`
+** Message: 18:18:36.700: Creating table `PatentsView_20190312`.`temp_ipcr_years_active`
+** Message: 18:18:36.782: Creating table `PatentsView_20190312`.`temp_inventor_num_assignees`
+** Message: 18:18:36.867: Creating table `PatentsView_20190312`.`temp_num_us_applications_cited`
+** Message: 18:18:36.949: Creating table `PatentsView_20190312`.`location_uspc_mainclass`
+** Message: 18:18:37.062: Creating table `PatentsView_20190312`.`location`
+** Message: 18:18:37.253: Creating table `PatentsView_20190312`.`uspc_current_mainclass_application_year`
+** Message: 18:18:37.335: Creating table `PatentsView_20190312`.`temp_assignee_lastknown_location`
+** Message: 18:18:37.421: Creating table `PatentsView_20190312`.`temp_num_us_patents_cited`
+** Message: 18:18:37.583: Creating table `PatentsView_20190312`.`patent_Assignee_Test`
+** Message: 18:18:37.671: Creating table `PatentsView_20190312`.`cpc_current_subsection_copy`
+** Message: 18:18:37.774: Creating table `PatentsView_20190312`.`temp_patent_aggregations`
+** Message: 18:18:37.863: Creating table `PatentsView_20190312`.`patent_contractawardnumber`
+** Message: 18:18:37.948: Creating table `PatentsView_20190312`.`inventor_rawinventor`
+** Message: 18:18:38.082: Creating table `PatentsView_20190312`.`temp_lawyer_years_active`
+** Message: 18:18:38.174: Creating table `PatentsView_20190312`.`nber_subcategory`
+** Message: 18:18:38.299: Creating table `PatentsView_20190312`.`uspc_subclass`
+** Message: 18:18:38.384: Creating table `PatentsView_20190312`.`assignee_cpc_group`
+** Message: 18:18:38.564: Creating table `PatentsView_20190312`.`inventor_coinventor`
+** Message: 18:18:38.683: Creating table `PatentsView_20190312`.`temp_mainclass_current_aggregate_counts`
+** Message: 18:18:38.768: Creating table `PatentsView_20190312`.`temp_assignee_years_active`
+** Message: 18:18:38.852: Creating table `PatentsView_20190312`.`cpc_current_group_patent_year`
+** Message: 18:18:38.966: Creating table `PatentsView_20190312`.`examiner`
+** Message: 18:18:39.099: Creating table `PatentsView_20190312`.`location_cpc_group`
+** Message: 18:18:39.220: Creating table `PatentsView_20190312`.`uspc_current_mainclass_copy`
+** Message: 18:18:39.326: Creating table `PatentsView_20190312`.`uspc_current`
+** Message: 18:18:40.226: Creating table `PatentsView_20190312`.`inventor_year`
+** Message: 18:18:40.342: Creating table `PatentsView_20190312`.`temp_id_mapping_lawyer`
+** Message: 18:18:40.436: Creating table `PatentsView_20190312`.`temp_location_num_patents`
+** Message: 18:18:40.569: Creating table `PatentsView_20190312`.`temp_location_patent`
+** Message: 18:18:40.682: Creating table `PatentsView_20190312`.`patent_inventor`
+** Message: 18:18:40.785: Creating table `PatentsView_20190312`.`temp_id_mapping_inventor`
+** Message: 18:18:40.894: Creating table `PatentsView_20190312`.`temp_lawyer_num_patents`
+** Message: 18:18:40.977: Creating table `PatentsView_20190312`.`temp_subclass_current_title`
+** Message: 18:18:41.059: Creating table `PatentsView_20190312`.`lawyer`
+** Message: 18:18:41.236: Creating table `PatentsView_20190312`.`temp_num_times_cited_by_us_patents`
+** Message: 18:18:41.338: Creating table `PatentsView_20190312`.`patent_assignee`
+** Message: 18:18:41.443: Creating table `PatentsView_20190312`.`temp_cpc_subsection_title`
+** Message: 18:18:41.607: Creating table `PatentsView_20190312`.`pctdata`
+** Message: 18:18:41.751: Creating table `PatentsView_20190312`.`temp_patent_firstnamed_assignee`
+** Message: 18:18:41.836: Creating table `PatentsView_20190312`.`cpc_group`
+** Message: 18:18:41.950: Creating table `PatentsView_20190312`.`temp_location_num_inventors`
+** Message: 18:18:42.032: Creating table `PatentsView_20190312`.`temp_cpc_current_subsection_aggregate_counts`
+** Message: 18:18:42.116: Creating table `PatentsView_20190312`.`temp_cpc_group_title`
+** Message: 18:18:42.211: Creating table `PatentsView_20190312`.`assignee_year`
+** Message: 18:18:42.328: Creating table `PatentsView_20190312`.`patent_govintorg`
+** Message: 18:18:42.435: Creating table `PatentsView_20190312`.`location_year`
+** Message: 18:18:42.648: Creating table `PatentsView_20190312`.`temp_location_num_assignees`
+** Message: 18:18:42.744: Creating table `PatentsView_20190312`.`assignee`
+** Message: 18:18:42.936: Creating table `PatentsView_20190312`.`temp_inventor_num_patents`
+** Message: 18:18:43.020: Creating table `PatentsView_20190312`.`cpc_subsection`
+** Message: 18:18:43.134: Creating table `PatentsView_20190312`.`nber_copy`
+** Message: 18:18:43.245: Creating table `PatentsView_20190312`.`uspc_current_mainclass`
+** Message: 18:18:43.892: Creating table `PatentsView_20190312`.`temp_patent_firstnamed_inventor`
+** Message: 18:18:43.976: Creating table `PatentsView_20190312`.`temp_id_mapping_location`
+** Message: 18:18:44.079: Creating table `PatentsView_20190312`.`government_interest`
+** Message: 18:18:44.752: Creating table `PatentsView_20190312`.`temp_lawyer_num_inventors`
+** Message: 18:18:44.835: Creating table `PatentsView_20190312`.`cpc_current_group_application_year`
+** Message: 18:18:44.918: Creating table `PatentsView_20190312`.`temp_patent_earliest_application_date`
+** Message: 18:18:45.000: Creating table `PatentsView_20190312`.`nber_subcategory_patent_year`
+** Message: 18:18:45.101: Creating table `PatentsView_20190312`.`wipo`
+** Message: 18:18:45.190: Creating table `PatentsView_20190312`.`location_nber_subcategory`
+** Message: 18:18:45.306: Creating table `PatentsView_20190312`.`cpc_current_subsection_patent_year`
+** Message: 18:18:45.401: Creating table `PatentsView_20190312`.`temp_assignee_num_inventors`
+** Message: 18:18:45.488: Creating table `PatentsView_20190312`.`location_inventor`
+** Message: 18:18:45.607: Creating table `PatentsView_20190312`.`uspc_current_copy`
+** Message: 18:18:45.723: Thread 1 restoring `PatentsView_20190312`.`location_inventor` part 19
+** Message: 18:18:45.723: Thread 2 restoring `PatentsView_20190312`.`temp_id_mapping_lawyer` part 0
+** Message: 18:18:45.724: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 63
+** Message: 18:18:45.724: Thread 4 restoring `PatentsView_20190312`.`location_inventor` part 18
+** Message: 18:18:49.084: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 38
+** Message: 18:18:49.904: Thread 1 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 1
+** Message: 18:18:53.050: Thread 3 restoring `PatentsView_20190312`.`assignee_cpc_group` part 3
+** Message: 18:18:53.784: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 84
+** Message: 18:18:55.465: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 179
+** Message: 18:18:57.713: Thread 1 restoring `PatentsView_20190312`.`assignee` part 3
+** Message: 18:18:59.026: Thread 3 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 7
+** Message: 18:18:59.286: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 49
+** Message: 18:19:04.336: Thread 4 restoring `PatentsView_20190312`.`examiner` part 60
+** Message: 18:19:04.897: Thread 3 restoring `PatentsView_20190312`.`inventor_rawinventor` part 118
+** Message: 18:19:06.238: Thread 2 restoring `PatentsView_20190312`.`patent_contractawardnumber` part 0
+** Message: 18:19:10.587: Thread 2 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 13
+** Message: 18:19:16.516: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 16
+** Message: 18:19:19.032: Thread 3 restoring `PatentsView_20190312`.`inventor_year` part 56
+** Message: 18:19:19.993: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 5
+** Message: 18:19:23.063: Thread 2 restoring `PatentsView_20190312`.`uspc_current_mainclass_patent_year` part 0
+** Message: 18:19:24.347: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 14
+** Message: 18:19:24.397: Thread 3 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 63
+** Message: 18:19:29.214: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 84
+** Message: 18:19:30.180: Thread 3 restoring `PatentsView_20190312`.`assignee_cpc_subsection` part 11
+** Message: 18:19:30.508: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 51
+** Message: 18:19:34.069: Thread 2 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 26
+** Message: 18:19:35.380: Thread 3 restoring `PatentsView_20190312`.`inventor_rawinventor` part 130
+** Message: 18:19:37.705: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 5
+** Message: 18:19:39.156: Thread 1 restoring `PatentsView_20190312`.`location_inventor` part 24
+** Message: 18:19:41.707: Thread 1 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 77
+** Message: 18:19:45.927: Thread 1 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 59
+** Message: 18:19:46.336: Thread 4 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 21
+** Message: 18:19:49.281: Thread 4 restoring `PatentsView_20190312`.`assignee_inventor` part 46
+** Message: 18:19:50.904: Thread 1 restoring `PatentsView_20190312`.`examiner` part 29
+** Message: 18:19:56.397: Thread 4 restoring `PatentsView_20190312`.`location_inventor` part 23
+** Message: 18:19:59.245: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 44
+** Message: 18:20:03.621: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 62
+** Message: 18:20:05.529: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 58
+** Message: 18:20:06.449: Thread 3 restoring `PatentsView_20190312`.`inventor_year` part 42
+** Message: 18:20:10.593: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 55
+** Message: 18:20:13.457: Thread 3 restoring `PatentsView_20190312`.`cpc_current_group` part 0
+** Message: 18:20:15.932: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 6
+** Message: 18:20:16.886: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 92
+** Message: 18:20:19.642: Thread 1 restoring `PatentsView_20190312`.`examiner` part 79
+** Message: 18:20:22.820: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 85
+** Message: 18:20:28.005: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 86
+** Message: 18:20:38.590: Thread 1 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 4
+** Message: 18:20:47.432: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 83
+** Message: 18:20:51.472: Thread 1 restoring `PatentsView_20190312`.`inventor_cpc_group` part 48
+** Message: 18:20:55.220: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 177
+** Message: 18:21:03.238: Thread 1 restoring `PatentsView_20190312`.`inventor_year` part 22
+** Message: 18:21:09.852: Thread 1 restoring `PatentsView_20190312`.`uspc_current_mainclass_application_year` part 0
+** Message: 18:21:10.509: Thread 4 restoring `PatentsView_20190312`.`inventor` part 9
+** Message: 18:21:10.909: Thread 1 restoring `PatentsView_20190312`.`inventor` part 31
+** Message: 18:21:11.097: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 6
+** Message: 18:21:36.347: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 95
+** Message: 18:21:36.372: Thread 1 restoring `PatentsView_20190312`.`inventor_year` part 77
+** Message: 18:21:41.065: Thread 1 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 81
+** Message: 18:21:49.835: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 150
+** Message: 18:21:52.209: Thread 1 restoring `PatentsView_20190312`.`assignee_cpc_subsection` part 6
+** Message: 18:22:02.142: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 94
+** Message: 18:22:03.383: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 81
+** Message: 18:22:03.559: Thread 1 restoring `PatentsView_20190312`.`assignee_cpc_subsection` part 8
+** Message: 18:22:06.141: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 116
+** Message: 18:22:09.690: Thread 1 restoring `PatentsView_20190312`.`inventor_rawinventor` part 70
+** Message: 18:22:12.590: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 66
+** Message: 18:22:14.049: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 67
+** Message: 18:22:23.268: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 93
+** Message: 18:22:25.883: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 91
+** Message: 18:22:26.325: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 153
+** Message: 18:22:34.327: Thread 2 restoring `PatentsView_20190312`.`temp_patent_firstnamed_assignee` part 0
+** Message: 18:22:36.074: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 46
+** Message: 18:22:52.540: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 48
+** Message: 18:23:29.783: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 143
+** Message: 18:23:31.199: Thread 1 restoring `PatentsView_20190312`.`inventor_coinventor` part 30
+** Message: 18:23:54.281: Thread 1 restoring `PatentsView_20190312`.`examiner` part 7
+** Message: 18:24:02.214: Thread 4 restoring `PatentsView_20190312`.`assignee_cpc_group` part 16
+** Message: 18:24:13.819: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 11
+** Message: 18:25:14.199: Thread 1 restoring `PatentsView_20190312`.`inventor_coinventor` part 4
+** Message: 18:25:25.965: Thread 1 restoring `PatentsView_20190312`.`location_inventor` part 7
+** Message: 18:25:35.254: Thread 1 restoring `PatentsView_20190312`.`examiner` part 0
+** Message: 18:25:48.922: Thread 4 restoring `PatentsView_20190312`.`inventor` part 32
+** Message: 18:26:50.225: Thread 1 restoring `PatentsView_20190312`.`location_inventor` part 15
+** Message: 18:26:52.636: Thread 4 restoring `PatentsView_20190312`.`temp_patent_date` part 0
+** Message: 18:26:59.589: Thread 1 restoring `PatentsView_20190312`.`inventor_rawinventor` part 20
+** Message: 18:28:28.429: Thread 1 restoring `PatentsView_20190312`.`inventor_coinventor` part 141
+** Message: 18:29:02.350: Thread 1 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 102
+** Message: 18:29:14.275: Thread 1 restoring `PatentsView_20190312`.`inventor_coinventor` part 151
+** Message: 18:29:48.452: Thread 1 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 29
+** Message: 18:29:58.195: Thread 1 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 16
+** Message: 18:30:11.555: Thread 1 restoring `PatentsView_20190312`.`location_year` part 6
+** Message: 18:30:17.169: Thread 1 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 17
+** Message: 18:30:39.516: Thread 1 restoring `PatentsView_20190312`.`inventor` part 6
+** Message: 18:31:14.116: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 124
+** Message: 18:31:32.150: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 47
+** Message: 18:31:50.174: Thread 1 restoring `PatentsView_20190312`.`inventor_year` part 8
+** Message: 18:31:55.354: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 17
+** Message: 18:32:03.327: Thread 2 restoring `PatentsView_20190312`.`location_inventor` part 3
+** Message: 18:32:03.988: Thread 1 restoring `PatentsView_20190312`.`examiner` part 30
+** Message: 18:32:10.219: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 122
+** Message: 18:32:58.110: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 61
+** Message: 18:33:06.028: Thread 4 restoring `PatentsView_20190312`.`examiner` part 12
+** Message: 18:33:12.052: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 111
+** Message: 18:33:20.675: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 66
+** Message: 18:33:27.398: Thread 1 restoring `PatentsView_20190312`.`location_inventor` part 22
+** Message: 18:33:29.168: Thread 1 restoring `PatentsView_20190312`.`inventor_rawinventor` part 25
+** Message: 18:33:57.722: Thread 4 restoring `PatentsView_20190312`.`assignee_inventor` part 6
+** Message: 18:34:10.293: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 15
+** Message: 18:34:25.264: Thread 4 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 17
+** Message: 18:34:35.572: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 56
+** Message: 18:34:57.821: Thread 1 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 18
+** Message: 18:35:14.836: Thread 1 restoring `PatentsView_20190312`.`location_nber_subcategory` part 4
+** Message: 18:35:20.579: Thread 1 restoring `PatentsView_20190312`.`inventor_rawinventor` part 0
+** Message: 18:35:30.319: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 159
+** Message: 18:35:58.338: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 107
+** Message: 18:36:26.428: Thread 1 restoring `PatentsView_20190312`.`inventor_coinventor` part 38
+** Message: 18:36:34.161: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 12
+** Message: 18:37:01.948: Thread 1 restoring `PatentsView_20190312`.`inventor_coinventor` part 50
+** Message: 18:37:09.072: Thread 2 restoring `PatentsView_20190312`.`assignee_cpc_subsection` part 9
+** Message: 18:37:21.496: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 144
+** Message: 18:37:24.025: Thread 2 restoring `PatentsView_20190312`.`temp_cpc_subgroup_title` part 0
+** Message: 18:37:35.014: Thread 1 restoring `PatentsView_20190312`.`inventor_coinventor` part 1
+** Message: 18:37:50.560: Thread 1 restoring `PatentsView_20190312`.`usapplicationcitation` part 0
+** Message: 18:37:59.378: Thread 2 restoring `PatentsView_20190312`.`examiner` part 34
+** Message: 18:38:56.373: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 31
+** Message: 18:39:41.183: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 41
+** Message: 18:39:49.176: Thread 2 restoring `PatentsView_20190312`.`temp_num_foreign_documents_cited` part 0
+** Message: 18:40:41.654: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 94
+** Message: 18:41:05.431: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 78
+** Message: 18:41:39.655: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 32
+** Message: 18:42:54.139: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 36
+** Message: 18:43:30.476: Thread 4 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 37
+** Message: 18:43:31.102: Thread 2 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 15
+** Message: 18:43:37.612: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 90
+** Message: 18:43:41.187: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 22
+** Message: 18:44:10.353: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 26
+** Message: 18:44:20.004: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 60
+** Message: 18:44:21.158: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 54
+** Message: 18:44:23.972: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 21
+** Message: 18:44:38.177: Thread 4 restoring `PatentsView_20190312`.`examiner` part 83
+** Message: 18:45:02.729: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 25
+** Message: 18:45:31.070: Thread 2 restoring `PatentsView_20190312`.`examiner` part 84
+** Message: 18:46:07.156: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 42
+** Message: 18:46:38.532: Thread 2 restoring `PatentsView_20190312`.`assignee_year` part 2
+** Message: 18:46:43.898: Thread 2 restoring `PatentsView_20190312`.`examiner` part 25
+** Message: 18:46:51.230: Thread 4 restoring `PatentsView_20190312`.`location_inventor` part 13
+** Message: 18:46:58.431: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 112
+** Message: 18:47:42.525: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 183
+** Message: 18:48:06.031: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 16
+** Message: 18:48:17.464: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 62
+** Message: 18:48:32.528: Thread 4 restoring `PatentsView_20190312`.`assignee_inventor` part 40
+** Message: 18:48:33.177: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 18
+** Message: 18:49:04.500: Thread 4 restoring `PatentsView_20190312`.`assignee_cpc_group` part 2
+** Message: 18:49:08.406: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 165
+** Message: 18:49:25.210: Thread 4 restoring `PatentsView_20190312`.`assignee_uspc_mainclass` part 5
+** Message: 18:49:31.469: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 30
+** Message: 18:49:36.422: Thread 2 restoring `PatentsView_20190312`.`examiner` part 68
+** Message: 18:49:42.623: Thread 4 restoring `PatentsView_20190312`.`location_nber_subcategory` part 2
+** Message: 18:49:56.208: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 91
+** Message: 18:51:15.707: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 13
+** Message: 18:51:30.507: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 78
+** Message: 18:51:33.980: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 59
+** Message: 18:51:47.022: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 35
+** Message: 18:51:50.748: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 174
+** Message: 18:52:05.941: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 60
+** Message: 18:52:10.684: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 68
+** Message: 18:52:13.341: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 83
+** Message: 18:52:17.117: Thread 2 restoring `PatentsView_20190312`.`examiner` part 15
+** Message: 18:52:39.100: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 71
+** Message: 18:53:54.439: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 11
+** Message: 18:54:04.195: Thread 2 restoring `PatentsView_20190312`.`assignee` part 0
+** Message: 18:54:22.154: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 173
+** Message: 18:54:42.646: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 40
+** Message: 18:55:00.422: Thread 4 restoring `PatentsView_20190312`.`nber_subcategory` part 0
+** Message: 18:55:00.446: Thread 4 restoring `PatentsView_20190312`.`assignee_inventor` part 25
+** Message: 18:55:41.543: Thread 4 restoring `PatentsView_20190312`.`location_cpc_group` part 30
+** Message: 18:55:41.596: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 50
+** Message: 18:55:45.247: Thread 4 restoring `PatentsView_20190312`.`pctdata` part 0
+** Message: 18:55:55.892: Thread 2 restoring `PatentsView_20190312`.`uspc_current_mainclass` part 0
+** Message: 19:02:03.918: Thread 4 restoring `PatentsView_20190312`.`assignee_cpc_subsection` part 0
+** Message: 19:02:20.899: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 76
+** Message: 19:02:25.851: Thread 4 restoring `PatentsView_20190312`.`location_inventor` part 0
+** Message: 19:02:26.816: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 52
+** Message: 19:02:57.933: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 12
+** Message: 19:03:35.431: Thread 4 restoring `PatentsView_20190312`.`location_cpc_subsection` part 1
+** Message: 19:03:40.388: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 45
+** Message: 19:03:49.132: Thread 4 restoring `PatentsView_20190312`.`inventor` part 23
+** Message: 19:05:26.588: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 17
+** Message: 19:07:04.301: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 119
+** Message: 19:07:37.527: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 69
+** Message: 19:07:43.046: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 113
+** Message: 19:07:55.986: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 59
+** Message: 19:08:18.543: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 5
+** Message: 19:08:31.211: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 53
+** Message: 19:08:49.499: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 194
+** Message: 19:09:02.861: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 35
+** Message: 19:09:12.272: Thread 4 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 1
+** Message: 19:09:29.336: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 115
+** Message: 19:10:10.405: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 57
+** Message: 19:10:17.932: Thread 4 restoring `PatentsView_20190312`.`inventor` part 18
+** Message: 19:11:55.692: Thread 4 restoring `PatentsView_20190312`.`examiner` part 31
+** Message: 19:13:33.695: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 7
+** Message: 19:14:08.492: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 70
+** Message: 19:14:35.899: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 72
+** Message: 19:14:50.518: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 96
+** Message: 19:15:19.729: Thread 4 restoring `PatentsView_20190312`.`location` part 0
+** Message: 19:15:54.951: Thread 4 restoring `PatentsView_20190312`.`location_cpc_group` part 18
+** Message: 19:16:03.158: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 77
+** Message: 19:16:30.105: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 64
+** Message: 19:17:07.844: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 135
+** Message: 19:18:42.300: Thread 4 restoring `PatentsView_20190312`.`location_cpc_group` part 17
+** Message: 19:18:56.691: Thread 4 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 35
+** Message: 19:19:07.090: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 71
+** Message: 19:19:31.632: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 1
+** Message: 19:19:34.444: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 51
+** Message: 19:21:17.759: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 36
+** Message: 19:21:37.407: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 71
+** Message: 19:22:04.238: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 114
+** Message: 19:22:10.145: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 137
+** Message: 19:22:40.481: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 26
+** Message: 19:24:24.143: Thread 4 restoring `PatentsView_20190312`.`assignee_year` part 0
+** Message: 19:24:35.718: Thread 4 restoring `PatentsView_20190312`.`location_inventor` part 1
+** Message: 19:24:37.918: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 33
+** Message: 19:24:48.350: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 129
+** Message: 19:26:29.459: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 114
+** Message: 19:27:01.750: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 48
+** Message: 19:27:10.723: Thread 4 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 18
+** Message: 19:27:24.881: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 80
+** Message: 19:27:29.615: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 11
+** Message: 19:28:05.661: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 85
+** Message: 19:28:16.563: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 92
+** Message: 19:28:25.706: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 8
+** Message: 19:28:46.833: Thread 4 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 22
+** Message: 19:29:02.600: Thread 4 restoring `PatentsView_20190312`.`assignee_inventor` part 21
+** Message: 19:29:46.953: Thread 4 restoring `PatentsView_20190312`.`assignee_cpc_group` part 7
+** Message: 19:30:13.580: Thread 4 restoring `PatentsView_20190312`.`temp_id_mapping_location` part 0
+** Message: 19:30:26.466: Thread 4 restoring `PatentsView_20190312`.`assignee` part 1
+** Message: 19:33:06.919: Thread 4 restoring `PatentsView_20190312`.`location_cpc_group` part 13
+** Message: 19:33:35.090: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 37
+** Message: 19:34:08.808: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 95
+** Message: 19:34:14.729: Thread 4 restoring `PatentsView_20190312`.`inventor` part 24
+** Message: 19:35:51.888: Thread 4 restoring `PatentsView_20190312`.`assignee_inventor` part 31
+** Message: 19:36:29.590: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 155
+** Message: 19:36:51.793: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 134
+** Message: 19:38:25.698: Thread 4 restoring `PatentsView_20190312`.`examiner` part 53
+** Message: 19:39:54.316: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 9
+** Message: 19:40:31.661: Thread 4 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 14
+** Message: 19:40:45.537: Thread 4 restoring `PatentsView_20190312`.`temp_lawyer_num_inventors` part 0
+** Message: 19:40:52.606: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 66
+** Message: 19:42:38.154: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 160
+** Message: 19:44:07.240: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 32
+** Message: 19:44:42.189: Thread 4 restoring `PatentsView_20190312`.`examiner` part 18
+** Message: 19:46:18.142: Thread 4 restoring `PatentsView_20190312`.`assignee_cpc_subsection` part 5
+** Message: 19:46:37.276: Thread 4 restoring `PatentsView_20190312`.`examiner` part 32
+** Message: 19:48:24.512: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 78
+** Message: 19:48:58.861: Thread 4 restoring `PatentsView_20190312`.`assignee_uspc_mainclass` part 4
+** Message: 19:49:13.987: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 20
+** Message: 19:49:26.582: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 100
+** Message: 19:51:09.335: Thread 4 restoring `PatentsView_20190312`.`assignee_inventor` part 36
+** Message: 19:51:46.540: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 51
+** Message: 19:52:19.448: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 90
+** Message: 19:52:25.071: Thread 4 restoring `PatentsView_20190312`.`assignee_cpc_group` part 0
+** Message: 19:52:55.765: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 104
+** Message: 19:53:16.178: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 75
+** Message: 19:55:03.406: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 63
+** Message: 19:55:34.575: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 91
+** Message: 19:55:43.281: Thread 4 restoring `PatentsView_20190312`.`examiner` part 19
+** Message: 19:57:23.084: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 31
+** Message: 19:57:55.147: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 45
+** Message: 19:59:39.650: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 34
+** Message: 19:59:50.101: Thread 4 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 23
+** Message: 20:00:01.610: Thread 4 restoring `PatentsView_20190312`.`inventor` part 21
+** Message: 20:01:38.564: Thread 4 restoring `PatentsView_20190312`.`assignee_cpc_subsection` part 12
+** Message: 20:01:51.636: Thread 4 restoring `PatentsView_20190312`.`inventor` part 27
+** Message: 20:03:29.808: Thread 4 restoring `PatentsView_20190312`.`assignee_inventor` part 32
+** Message: 20:04:05.753: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 52
+** Message: 20:04:24.248: Thread 4 restoring `PatentsView_20190312`.`assignee_uspc_mainclass` part 6
+** Message: 20:04:48.064: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 9
+** Message: 20:05:11.456: Thread 4 restoring `PatentsView_20190312`.`inventor` part 28
+** Message: 20:06:46.102: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 44
+** Message: 20:07:18.150: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 2
+** Message: 20:08:56.767: Thread 4 restoring `PatentsView_20190312`.`examiner` part 64
+** Message: 20:10:24.908: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 65
+** Message: 20:11:00.226: Thread 4 restoring `PatentsView_20190312`.`location_cpc_group` part 3
+** Message: 20:11:30.237: Thread 4 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 20
+** Message: 20:11:51.962: Thread 4 restoring `PatentsView_20190312`.`temp_id_mapping_location_transformed` part 0
+** Message: 20:12:00.036: Thread 4 restoring `PatentsView_20190312`.`inventor` part 13
+** Message: 20:13:34.915: Thread 4 restoring `PatentsView_20190312`.`inventor` part 14
+** Message: 20:15:00.751: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 105
+** Message: 20:15:30.296: Thread 4 restoring `PatentsView_20190312`.`assignee_cpc_group` part 15
+** Message: 20:15:59.777: Thread 4 restoring `PatentsView_20190312`.`inventor` part 3
+** Message: 20:17:34.533: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 21
+** Message: 20:17:46.195: Thread 4 restoring `PatentsView_20190312`.`patent_govintorg` part 0
+** Message: 20:17:53.849: Thread 4 restoring `PatentsView_20190312`.`location_cpc_subsection` part 14
+** Message: 20:18:05.112: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 19
+** Message: 20:18:34.282: Thread 4 restoring `PatentsView_20190312`.`location_cpc_subsection` part 4
+** Message: 20:18:52.942: Thread 4 restoring `PatentsView_20190312`.`temp_inventor_lastknown_location` part 0
+** Message: 20:23:45.391: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 64
+** Message: 20:24:02.435: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 117
+** Message: 20:24:35.813: Thread 4 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 8
+** Message: 20:24:50.216: Thread 4 restoring `PatentsView_20190312`.`assignee_inventor` part 17
+** Message: 20:25:36.716: Thread 4 restoring `PatentsView_20190312`.`cpc_current_group_application_year` part 0
+** Message: 20:25:38.128: Thread 4 restoring `PatentsView_20190312`.`assignee_uspc_mainclass` part 2
+** Message: 20:26:08.138: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 52
+** Message: 20:26:17.656: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 25
+** Message: 20:26:26.742: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 143
+** Message: 20:27:58.168: Thread 4 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 5
+** Message: 20:28:12.599: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 184
+** Message: 20:28:28.584: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 126
+** Message: 20:30:14.718: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 186
+** Message: 20:30:32.055: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 43
+** Message: 20:31:01.726: Thread 4 restoring `PatentsView_20190312`.`assignee_year` part 5
+** Message: 20:31:13.267: Thread 4 restoring `PatentsView_20190312`.`examiner` part 5
+** Message: 20:32:42.644: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 84
+** Message: 20:33:00.317: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 109
+** Message: 20:33:24.084: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 76
+** Message: 20:35:12.925: Thread 4 restoring `PatentsView_20190312`.`assignee_uspc_mainclass` part 10
+** Message: 20:35:41.627: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 104
+** Message: 20:36:18.964: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 108
+** Message: 20:36:28.352: Thread 4 restoring `PatentsView_20190312`.`cpc_subgroup` part 0
+** Message: 20:37:04.090: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 103
+** Message: 20:37:24.691: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 113
+** Message: 20:38:03.240: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 51
+** Message: 20:38:31.670: Thread 4 restoring `PatentsView_20190312`.`assignee_uspc_mainclass` part 14
+** Message: 20:38:58.487: Thread 4 restoring `PatentsView_20190312`.`assignee_nber_subcategory` part 5
+** Message: 20:39:04.161: Thread 4 restoring `PatentsView_20190312`.`patent_lawyer` part 0
+** Message: 20:51:59.705: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 205
+** Message: 20:52:14.270: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 38
+** Message: 20:52:47.480: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 24
+** Message: 20:53:07.999: Thread 2 restoring `PatentsView_20190312`.`inventor` part 2
+** Message: 20:54:56.902: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 109
+** Message: 20:56:48.197: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 19
+** Message: 20:57:17.970: Thread 3 restoring `PatentsView_20190312`.`location_cpc_subsection` part 13
+** Message: 20:57:30.223: Thread 2 restoring `PatentsView_20190312`.`examiner` part 66
+** Message: 20:57:33.808: Thread 3 restoring `PatentsView_20190312`.`inventor_year` part 65
+** Message: 20:57:39.229: Thread 3 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 45
+** Message: 20:58:04.751: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 79
+** Message: 20:58:51.646: Thread 3 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 19
+** Message: 20:59:16.366: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 111
+** Message: 20:59:18.977: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 75
+** Message: 21:00:10.918: Thread 3 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 51
+** Message: 21:00:26.129: Thread 3 restoring `PatentsView_20190312`.`inventor_cpc_group` part 36
+** Message: 21:00:53.845: Thread 3 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 40
+** Message: 21:01:08.733: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 110
+** Message: 21:01:19.928: Thread 3 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 14
+** Message: 21:01:33.232: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 202
+** Message: 21:01:52.765: Thread 3 restoring `PatentsView_20190312`.`location_cpc_group` part 5
+** Message: 21:02:24.405: Thread 3 restoring `PatentsView_20190312`.`inventor_rawinventor` part 72
+** Message: 21:02:58.003: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 21
+** Message: 21:03:27.114: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 60
+** Message: 21:04:08.298: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 22
+** Message: 21:04:10.729: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 16
+** Message: 21:04:18.904: Thread 3 restoring `PatentsView_20190312`.`inventor_year` part 15
+** Message: 21:04:28.445: Thread 3 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 10
+** Message: 21:04:40.491: Thread 3 restoring `PatentsView_20190312`.`location_inventor` part 31
+** Message: 21:04:45.034: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 82
+** Message: 21:04:45.456: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 56
+** Message: 21:05:10.975: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 2
+** Message: 21:05:19.167: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 73
+** Message: 21:05:22.571: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 159
+** Message: 21:05:32.491: Thread 4 restoring `PatentsView_20190312`.`assignee_uspc_mainclass` part 11
+** Message: 21:05:48.188: Thread 3 restoring `PatentsView_20190312`.`inventor_year` part 63
+** Message: 21:05:54.605: Thread 3 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 25
+** Message: 21:06:01.096: Thread 4 restoring `PatentsView_20190312`.`examiner` part 39
+** Message: 21:06:01.401: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 1
+** Message: 21:06:04.376: Thread 3 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 101
+** Message: 21:06:19.604: Thread 2 restoring `PatentsView_20190312`.`examiner` part 76
+** Message: 21:06:22.698: Thread 3 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 23
+** Message: 21:06:37.412: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 35
+** Message: 21:07:19.580: Thread 3 restoring `PatentsView_20190312`.`location_nber_subcategory` part 0
+** Message: 21:07:28.791: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 43
+** Message: 21:07:36.125: Thread 4 restoring `PatentsView_20190312`.`assignee_uspc_mainclass` part 1
+** Message: 21:07:57.707: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 57
+** Message: 21:08:03.953: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 24
+** Message: 21:08:11.162: Thread 3 restoring `PatentsView_20190312`.`assignee_inventor` part 0
+** Message: 21:08:13.430: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 181
+** Message: 21:08:34.535: Thread 4 restoring `PatentsView_20190312`.`assignee_cpc_subsection` part 4
+** Message: 21:08:37.702: Thread 3 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 3
+** Message: 21:08:41.988: Thread 2 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 0
+** Message: 21:08:51.383: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 50
+** Message: 21:08:57.300: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 17
+** Message: 21:09:07.328: Thread 3 restoring `PatentsView_20190312`.`location_inventor` part 25
+** Message: 21:09:09.112: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 39
+** Message: 21:09:09.315: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 13
+** Message: 21:09:09.451: Thread 3 restoring `PatentsView_20190312`.`inventor_rawinventor` part 67
+** Message: 21:09:15.405: Thread 4 restoring `PatentsView_20190312`.`examiner` part 14
+** Message: 21:10:54.530: Thread 4 restoring `PatentsView_20190312`.`assignee_inventor` part 5
+** Message: 21:11:00.140: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 93
+** Message: 21:11:04.022: Thread 3 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 10
+** Message: 21:11:07.082: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 45
+** Message: 21:11:19.301: Thread 3 restoring `PatentsView_20190312`.`location_inventor` part 32
+** Message: 21:11:22.324: Thread 3 restoring `PatentsView_20190312`.`cpc_group` part 0
+** Message: 21:11:22.696: Thread 3 restoring `PatentsView_20190312`.`examiner` part 36
+** Message: 21:11:33.261: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 65
+** Message: 21:11:34.632: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 1
+** Message: 21:11:45.055: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 34
+** Message: 21:11:56.926: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 70
+** Message: 21:14:48.696: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 17
+** Message: 21:15:25.387: Thread 3 restoring `PatentsView_20190312`.`inventor_rawinventor` part 12
+** Message: 21:15:26.064: Thread 4 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 17
+** Message: 21:16:18.555: Thread 4 restoring `PatentsView_20190312`.`location_cpc_subsection` part 2
+** Message: 21:16:53.151: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 116
+** Message: 21:16:58.407: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 149
+** Message: 21:18:29.394: Thread 2 restoring `PatentsView_20190312`.`temp_cpc_subsection_title` part 0
+** Message: 21:18:30.586: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 77
+** Message: 21:18:52.527: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 92
+** Message: 21:19:39.000: Thread 4 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 4
+** Message: 21:20:18.445: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 87
+** Message: 21:20:46.101: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 88
+** Message: 21:21:35.118: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 51
+** Message: 21:21:35.090: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 4
+** Message: 21:23:55.317: Thread 3 restoring `PatentsView_20190312`.`inventor_rawinventor` part 150
+** Message: 21:26:24.052: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 180
+** Message: 21:27:14.468: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 31
+** Message: 21:27:28.272: Thread 4 restoring `PatentsView_20190312`.`location_inventor` part 26
+** Message: 21:27:31.163: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 75
+** Message: 21:27:37.237: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 73
+** Message: 21:28:13.464: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 86
+** Message: 21:29:04.643: Thread 2 restoring `PatentsView_20190312`.`assignee_nber_subcategory` part 1
+** Message: 21:29:11.178: Thread 3 restoring `PatentsView_20190312`.`patent_examiner` part 0
+** Message: 21:29:19.607: Thread 2 restoring `PatentsView_20190312`.`examiner` part 67
+** Message: 21:35:49.956: Thread 2 restoring `PatentsView_20190312`.`examiner` part 57
+** Message: 21:36:27.151: Thread 4 restoring `PatentsView_20190312`.`inventor_year` part 78
+** Message: 21:36:33.337: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 38
+** Message: 21:37:38.960: Thread 4 restoring `PatentsView_20190312`.`assignee_uspc_mainclass` part 9
+** Message: 21:38:50.166: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 99
+** Message: 21:38:54.781: Thread 4 restoring `PatentsView_20190312`.`assignee_inventor` part 39
+** Message: 21:40:26.181: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 81
+** Message: 21:40:43.879: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 90
+** Message: 21:41:04.817: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 154
+** Message: 21:42:41.653: Thread 2 restoring `PatentsView_20190312`.`temp_id_mapping_inventor` part 0
+** Message: 21:42:57.111: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 16
+** Message: 21:44:39.604: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 46
+** Message: 21:44:55.507: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 89
+** Message: 21:51:18.042: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 134
+** Message: 21:53:07.488: Thread 2 restoring `PatentsView_20190312`.`location_year` part 9
+** Message: 21:53:23.213: Thread 2 restoring `PatentsView_20190312`.`location_year` part 10
+** Message: 21:53:26.373: Thread 2 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 21
+** Message: 21:53:45.552: Thread 4 restoring `PatentsView_20190312`.`examiner` part 40
+** Message: 21:53:49.696: Thread 2 restoring `PatentsView_20190312`.`inventor` part 5
+** Message: 21:59:44.932: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 68
+** Message: 22:00:02.021: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 30
+** Message: 22:01:07.881: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 7
+** Message: 22:02:57.713: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 0
+** Message: 22:04:06.125: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 200
+** Message: 22:05:17.546: Thread 2 restoring `PatentsView_20190312`.`examiner` part 33
+** Message: 22:08:15.844: Thread 4 restoring `PatentsView_20190312`.`assignee_uspc_mainclass` part 15
+** Message: 22:08:59.443: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 33
+** Message: 22:10:11.953: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 75
+** Message: 22:10:44.179: Thread 4 restoring `PatentsView_20190312`.`location_cpc_group` part 2
+** Message: 22:10:46.431: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 102
+** Message: 22:11:33.219: Thread 4 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 83
+** Message: 22:11:36.404: Thread 2 restoring `PatentsView_20190312`.`examiner` part 17
+** Message: 22:12:18.544: Thread 4 restoring `PatentsView_20190312`.`examiner` part 52
+** Message: 22:16:32.091: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 35
+** Message: 22:17:25.871: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 28
+** Message: 22:18:04.763: Thread 2 restoring `PatentsView_20190312`.`location_inventor` part 10
+** Message: 22:18:16.982: Thread 2 restoring `PatentsView_20190312`.`examiner` part 71
+** Message: 22:18:29.294: Thread 4 restoring `PatentsView_20190312`.`inventor` part 10
+** Message: 22:24:07.691: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 34
+** Message: 22:24:33.267: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 60
+** Message: 22:31:52.817: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 62
+** Message: 22:32:12.793: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 43
+** Message: 22:39:16.009: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 98
+** Message: 22:39:38.398: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 71
+** Message: 22:39:46.975: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 33
+** Message: 22:40:58.483: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 0
+** Message: 22:41:13.723: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 8
+** Message: 22:41:43.475: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 95
+** Message: 22:42:33.980: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 23
+** Message: 22:43:09.250: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 69
+** Message: 22:45:58.799: Thread 4 restoring `PatentsView_20190312`.`inventor_rawinventor` part 63
+** Message: 22:49:08.475: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 10
+** Message: 22:50:20.136: Thread 2 restoring `PatentsView_20190312`.`inventor` part 12
+** Message: 22:53:57.788: Thread 4 restoring `PatentsView_20190312`.`inventor` part 35
+** Message: 22:55:34.022: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 26
+** Message: 22:56:47.892: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 18
+** Message: 22:57:14.165: Thread 2 restoring `PatentsView_20190312`.`examiner` part 73
+** Message: 22:59:53.347: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 65
+** Message: 23:00:25.559: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_group` part 112
+** Message: 23:00:54.934: Thread 4 restoring `PatentsView_20190312`.`temp_patent_earliest_application_date` part 0
+** Message: 23:03:16.936: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 18
+** Message: 23:03:50.666: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 11
+** Message: 23:06:48.976: Thread 4 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 47
+** Message: 23:06:56.912: Thread 4 restoring `PatentsView_20190312`.`examiner` part 75
+** Message: 23:12:41.519: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 88
+** Message: 23:12:46.779: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 35
+** Message: 23:13:10.777: Thread 4 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 3
+** Message: 23:13:51.380: Thread 4 restoring `PatentsView_20190312`.`inventor_coinventor` part 161
+** Message: 23:13:58.187: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 6
+** Message: 23:14:38.158: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 3
+** Message: 23:15:36.197: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 15
+** Message: 23:15:47.175: Thread 4 restoring `PatentsView_20190312`.`cpc_current` part 0
+** Message: 23:17:06.029: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 14
+** Message: 23:19:31.599: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 46
+** Message: 23:20:29.770: Thread 2 restoring `PatentsView_20190312`.`location_inventor` part 8
+** Message: 23:20:51.066: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 164
+** Message: 23:22:40.785: Thread 2 restoring `PatentsView_20190312`.`examiner` part 51
+** Message: 23:28:37.299: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 4
+** Message: 23:29:59.397: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 198
+** Message: 23:31:28.737: Thread 2 restoring `PatentsView_20190312`.`location_cpc_group` part 25
+** Message: 23:32:36.216: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 140
+** Message: 23:40:44.361: Thread 3 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 47
+** Message: 23:41:01.656: Thread 2 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 8
+** Message: 23:41:13.996: Thread 3 restoring `PatentsView_20190312`.`inventor_rawinventor` part 74
+** Message: 23:42:05.118: Thread 2 restoring `PatentsView_20190312`.`location_inventor` part 16
+** Message: 23:42:17.559: Thread 2 restoring `PatentsView_20190312`.`assignee_cpc_group` part 12
+** Message: 23:43:15.830: Thread 2 restoring `PatentsView_20190312`.`assignee_cpc_group` part 9
+** Message: 23:43:34.427: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 49
+** Message: 23:45:53.592: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 51
+** Message: 23:46:05.135: Thread 2 restoring `PatentsView_20190312`.`inventor` part 4
+** Message: 23:48:51.060: Thread 3 restoring `PatentsView_20190312`.`wipo_field` part 0
+** Message: 23:48:52.622: Thread 3 restoring `PatentsView_20190312`.`inventor_cpc_group` part 97
+** Message: 23:49:44.405: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 199
+** Message: 23:50:58.568: Thread 2 restoring `PatentsView_20190312`.`inventor` part 0
+** Message: 23:51:11.862: Thread 3 restoring `PatentsView_20190312`.`inventor_rawinventor` part 142
+** Message: 23:54:31.106: Thread 2 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 23
+** Message: 23:55:27.342: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 61
+** Message: 23:55:36.363: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 123
+** Message: 23:58:21.123: Thread 3 restoring `PatentsView_20190312`.`assignee_inventor` part 14
+** Message: 00:00:05.976: Thread 3 restoring `PatentsView_20190312`.`inventor_rawinventor` part 52
+** Message: 00:02:21.618: Thread 2 restoring `PatentsView_20190312`.`assignee_year` part 7
+** Message: 00:02:42.258: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 84
+** Message: 00:02:48.171: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 58
+** Message: 00:03:44.613: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 106
+** Message: 00:06:31.851: Thread 3 restoring `PatentsView_20190312`.`inventor_rawinventor` part 147
+** Message: 00:10:10.759: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 81
+** Message: 00:11:00.181: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 39
+** Message: 00:13:09.421: Thread 3 restoring `PatentsView_20190312`.`inventor_cpc_group` part 39
+** Message: 00:14:05.693: Thread 3 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 25
+** Message: 00:14:50.298: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 28
+** Message: 00:16:54.316: Thread 3 restoring `PatentsView_20190312`.`inventor_year` part 44
+** Message: 00:17:08.798: Thread 3 restoring `PatentsView_20190312`.`location_inventor` part 37
+** Message: 00:17:14.196: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 169
+** Message: 00:18:01.727: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 73
+** Message: 00:18:37.306: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 188
+** Message: 00:18:46.134: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 15
+** Message: 00:19:21.141: Thread 2 restoring `PatentsView_20190312`.`location_year` part 2
+** Message: 00:19:26.184: Thread 3 restoring `PatentsView_20190312`.`assignee_inventor` part 4
+** Message: 00:19:40.387: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 62
+** Message: 00:21:08.821: Thread 3 restoring `PatentsView_20190312`.`inventor_cpc_group` part 50
+** Message: 00:22:00.697: Thread 2 restoring `PatentsView_20190312`.`examiner` part 74
+** Message: 00:22:09.266: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 118
+** Message: 00:24:39.554: Thread 3 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 77
+** Message: 00:25:27.482: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 111
+** Message: 00:26:59.213: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 2
+** Message: 00:27:52.561: Thread 2 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 4
+** Message: 00:28:10.319: Thread 3 restoring `PatentsView_20190312`.`inventor_rawinventor` part 33
+** Message: 00:28:13.409: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 69
+** Message: 00:29:05.315: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 175
+** Message: 00:30:40.968: Thread 2 restoring `PatentsView_20190312`.`temp_assignee_num_inventors` part 0
+** Message: 00:31:00.548: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 1
+** Message: 00:32:49.887: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 79
+** Message: 00:33:32.542: Thread 2 restoring `PatentsView_20190312`.`temp_ipcr_years_active` part 0
+** Message: 00:33:34.214: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 37
+** Message: 00:35:03.829: Thread 2 restoring `PatentsView_20190312`.`location_inventor` part 27
+** Message: 00:35:12.583: Thread 2 restoring `PatentsView_20190312`.`temp_cpc_current_subsection_aggregate_counts` part 0
+** Message: 00:35:12.868: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 107
+** Message: 00:35:40.384: Thread 3 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 24
+** Message: 00:36:33.270: Thread 3 restoring `PatentsView_20190312`.`inventor_coinventor` part 138
+** Message: 00:37:22.414: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 119
+** Message: 00:38:31.179: Thread 3 restoring `PatentsView_20190312`.`inventor_cpc_group` part 49
+** Message: 00:39:27.612: Thread 3 restoring `PatentsView_20190312`.`government_organization` part 0
+** Message: 00:39:28.909: Thread 3 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 13
+** Message: 00:40:20.663: Thread 3 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 56
+** Message: 00:40:49.841: Thread 3 restoring `PatentsView_20190312`.`assignee_inventor` part 24
+** Message: 00:42:41.470: Thread 3 restoring `PatentsView_20190312`.`inventor_rawinventor` part 61
+** Message: 00:44:36.394: Thread 2 restoring `PatentsView_20190312`.`location_uspc_mainclass` part 10
+** Message: 00:46:01.994: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 117
+** Message: 00:46:19.582: Thread 2 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 2
+** Message: 00:46:39.678: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 82
+** Message: 00:47:17.537: Thread 2 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 16
+** Message: 00:47:36.273: Thread 2 restoring `PatentsView_20190312`.`inventor_nber_subcategory` part 33
+** Message: 00:47:43.796: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 130
+** Message: 00:49:49.566: Thread 3 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 48
+** Message: 00:50:09.899: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 27
+** Message: 00:50:46.172: Thread 3 restoring `PatentsView_20190312`.`examiner` part 26
+** Message: 00:52:04.356: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 99
+** Message: 00:54:59.795: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 31
+** Message: 00:55:36.442: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 58
+** Message: 00:55:58.589: Thread 3 restoring `PatentsView_20190312`.`inventor_year` part 18
+** Message: 00:56:14.523: Thread 3 restoring `PatentsView_20190312`.`uspc_current` part 0
+** Message: 01:04:26.841: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 182
+** Message: 01:06:01.283: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 34
+** Message: 01:07:05.409: Thread 2 restoring `PatentsView_20190312`.`nber_subcategory_patent_year` part 0
+** Message: 01:07:06.404: Thread 2 restoring `PatentsView_20190312`.`temp_location_num_assignees` part 0
+** Message: 01:07:10.380: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 19
+** Message: 01:07:53.754: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 37
+** Message: 01:08:06.839: Thread 2 restoring `PatentsView_20190312`.`examiner` part 77
+** Message: 01:13:24.499: Thread 2 restoring `PatentsView_20190312`.`location_assignee` part 0
+** Message: 01:13:32.319: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 148
+** Message: 01:15:47.848: Thread 2 restoring `PatentsView_20190312`.`examiner` part 43
+** Message: 01:21:37.559: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 26
+** Message: 01:23:58.020: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 49
+** Message: 01:25:24.756: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 102
+** Message: 01:34:01.344: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 24
+** Message: 01:42:40.644: Thread 2 restoring `PatentsView_20190312`.`location_cpc_group` part 23
+** Message: 01:43:36.905: Thread 2 restoring `PatentsView_20190312`.`assignee_cpc_group` part 1
+** Message: 01:44:47.877: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 0
+** Message: 01:46:23.081: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 2
+** Message: 01:47:08.849: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 190
+** Message: 01:48:17.650: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 126
+** Message: 01:50:47.964: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 94
+** Message: 01:50:53.925: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 76
+** Message: 01:51:46.323: Thread 2 restoring `PatentsView_20190312`.`assignee_uspc_mainclass` part 7
+** Message: 01:52:56.458: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 53
+** Message: 01:53:57.110: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 97
+** Message: 02:02:54.329: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 133
+** Message: 02:12:20.106: Thread 2 restoring `PatentsView_20190312`.`location_cpc_subsection` part 8
+** Message: 02:12:52.701: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 30
+** Message: 02:14:43.785: Thread 2 restoring `PatentsView_20190312`.`examiner` part 10
+** Message: 02:20:53.669: Thread 2 restoring `PatentsView_20190312`.`inventor_rawinventor` part 94
+** Message: 02:31:01.739: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 70
+** Message: 02:31:10.547: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 0
+** Message: 02:31:12.291: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 87
+** Message: 02:31:50.696: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 85
+** Message: 02:31:56.348: Thread 2 restoring `PatentsView_20190312`.`assignee_cpc_group` part 6
+** Message: 02:33:15.034: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 104
+** Message: 02:34:09.627: Thread 2 restoring `PatentsView_20190312`.`inventor_year` part 4
+** Message: 02:34:32.805: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 41
+** Message: 02:36:27.441: Thread 2 restoring `PatentsView_20190312`.`inventor_uspc_mainclass` part 57
+** Message: 02:37:25.499: Thread 2 restoring `PatentsView_20190312`.`inventor_coinventor` part 207
+** Message: 02:38:20.326: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_group` part 68
+** Message: 02:39:27.884: Thread 2 restoring `PatentsView_20190312`.`assignee_inventor` part 8
+** Message: 02:41:46.703: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 71
+** Message: 02:42:16.876: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 41
+** Message: 02:42:34.767: Thread 2 restoring `PatentsView_20190312`.`inventor_cpc_subsection` part 69
+** Message: 02:42:43.048: Thread 2 restoring `PatentsView_20190312`.`cpc_current_copy` part 0
+    
+
