@@ -1,3 +1,5 @@
+**[summary](#summary) | [contents](#contents) | [usage](#usage) | [running the notebooks](#running-the-notebooks) | [issues](#issues) | [license](#license)**
+
 # techniche
 
 #### Machine learning-based patent signals for technology decisions 
