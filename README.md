@@ -8,6 +8,15 @@ Techniche is a recommendation engine that offers machine learning-based decision
 #### Business understanding
 Technology decision-makers - in engineering, people and product - require data to make choices in markets shaped by machine-learning technologies. Techniche recommends technology ideas based on the pipeline of underlying machine learning technologies in patents.
 
+#### Contents
+Walk-through notebooks are available in the model selection directory.
+
+#### Usage
+To setup your software environment, it is recommended to use the provided conda environment
+
+conda env create -f environment.yml
+conda activate techniche-environment
+
 #### Data understanding
 Techniche learns from public patent documents of the United States Patent Organization (USPTO) that are made available through the [PatentsView API](http://www.patentsview.org/api/doc.html), dump files of the PatentsView backend database, and supplementary files containing full patent documents not available throuh the API. Users can explore the data used in Techniche via the PatentsView graphical [user interface](http://www.patentsview.org/query/).
 
