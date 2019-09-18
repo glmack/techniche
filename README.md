@@ -2,6 +2,8 @@
 
 # techniche
 
+[![Binder](https://mybinder.org/)](https://mybinder.org/)
+
 #### Machine learning-based patent signals for technology decisions 
 Techniche is a recommendation engine that offers machine learning-based decision support to help business users surface technology ideas from patent documents for machine learning inventions.
 
