@@ -1,7 +1,7 @@
 **[summary](#techniche) | [demo web app](https://www.techniche.app) | [usage](#usage) | [walk through notebooks](#running-the-notebooks) | [license](#license)**
 
 # techniche
-Machine learning-based patent signals for technology decisions
+**Machine learning-based patent signals for technology decisions**
 
 [![Build Status](https://travis-ci.org/glmack/techniche.svg?branch=master)](https://travis-ci.org/glmack/techniche.svg?branch=master)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glmack/techniche/master)
