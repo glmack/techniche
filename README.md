@@ -7,7 +7,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glmack/techniche/master)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-Techniche is a recommendation engine that offers machine learning-based decision support to help business users surface technology ideas from patent documents for machine learning inventions.
+Techniche is a recommendation engine-based decision support tool to help business users surface technology ideas from patent documents for machine learning inventions.
 
 #### Business understanding
 Technology decision-makers - in engineering, people and product - require data to make choices in markets shaped by machine-learning technologies. Techniche recommends technology ideas based on the pipeline of underlying machine learning technologies in patents.
