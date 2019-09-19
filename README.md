@@ -63,7 +63,7 @@ Explore notebooks detailing data preparation and modeling in [topic_model.ipynb]
 Techniche predicts technology recommendations using a hybrid recommender system. At the current stage of development, a collaborative filtering recommender component uses matrix factorization based on the Spark implementation of alternating least squares (ALS). A content-based recommender component, currently under development, addresses the cold start problem associated with making predictions for new users and items. The recommender will use text-based document (item) similarity metrics and also elicit user preferences through the web app. Latent Dirichlet Allocation (LDA), an unsupervised set of topic models is explored to generate the probable range of topics expressed in patent documents for machine learning-based inventions.
 
 #### Evaluation
-Recommendations are evaluated in terms of relevance to technology decision-makers. Intermediate intrinsic evaluation metrics, such as coherence and perplexity metrics for LDA, provide additional diagnostics.
+Recommendations are evaluated in terms of relevance to technology decision-makers. Intermediate intrinsic evaluation metrics, such as coherence and perplexity metrics for LDA provide additional diagnostics.
 
 #### Deployment
-Techniche is available for user experimentation as a Flask [web app](https://www.techniche.app) as a Flask web application that offers a search interface where - as an intermediate demo step - users can input text strings describing technical areas and return predicted topics and their associated word co-occurences.
+Techniche is available for user experimentation as a Flask [web app](https://www.techniche.app) that offers a search interface where - as an intermediate demo step - users can input text strings describing technical areas and return predicted topics and their associated word co-occurences.
