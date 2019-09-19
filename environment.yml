@@ -1,5 +1,6 @@
 name: techniche_env
 channels:
+  - anaconda
   - defaults
 dependencies:
   - _py-xgboost-mutex=2.0=cpu_0
@@ -11,10 +12,11 @@ dependencies:
   - boto=2.49.0=py36_0
   - boto3=1.9.111=py_0
   - botocore=1.12.112=py_0
-  - ca-certificates=2019.1.23=0
-  - certifi=2019.3.9=py36_0
+  - ca-certificates=2019.5.15=1
+  - certifi=2019.6.16=py36_1
   - cffi=1.11.5=py36h6174b99_1
   - chardet=3.0.4=py36_1
+  - click=7.0=py36_0
   - cryptography=2.3.1=py36hdbc3d79_0
   - cryptography-vectors=2.3.1=py36_0
   - cycler=0.10.0=py36hfc81398_0
@@ -23,6 +25,7 @@ dependencies:
   - defusedxml=0.5.0=py36_1
   - docutils=0.14=py36hbfde631_0
   - entrypoints=0.3=py36_0
+  - flask=1.1.1=py_0
   - freetype=2.9.1=hb4e5f40_0
   - gensim=3.4.0=py36h1de35cc_0
   - h5py=2.9.0=py36h3134771_0
@@ -32,6 +35,7 @@ dependencies:
   - ipykernel=5.1.0=py36h39e3cac_0
   - ipython=6.5.0=py36_0
   - ipython_genutils=0.2.0=py36h241746c_0
+  - itsdangerous=1.1.0=py36_0
   - jedi=0.12.1=py36_0
   - jinja2=2.10=py36_0
   - jmespath=0.9.4=py_0
@@ -64,7 +68,7 @@ dependencies:
   - notebook=5.7.8=py36_0
   - numpy=1.16.2=py36hacdab7b_0
   - numpy-base=1.16.2=py36h6575580_0
-  - openssl=1.0.2r=h1de35cc_0
+  - openssl=1.0.2t=h1de35cc_1
   - pandas=0.23.4=py36h6440ff4_0
   - pandoc=2.2.3.2=0
   - pandocfilters=1.4.2=py36_1
