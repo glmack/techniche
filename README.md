@@ -12,7 +12,7 @@ Techniche is a recommendation engine that offers machine learning-based decision
 #### Business understanding
 Technology decision-makers - in engineering, people and product - require data to make choices in markets shaped by machine-learning technologies. Techniche recommends technology ideas based on the pipeline of underlying machine learning technologies in patents.
 
-## Usage
+#### Usage
 
 Dependencies are specified in [requirements.txt](/requirements.txt)
 
