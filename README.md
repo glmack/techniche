@@ -7,7 +7,10 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glmack/techniche/master)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
+
 Techniche is a recommendation engine-based decision support tool to help business users surface technology ideas from patent documents for machine learning inventions.
+
+![Image description](imgs/Screen Shot 2019-09-18 at 7.34.26 PM.png)
 
 #### Business understanding
 Technology decision-makers - in engineering, people and product - require data to make choices in markets shaped by machine-learning technologies. Techniche recommends technology ideas based on the pipeline of underlying machine learning technologies in patents.
