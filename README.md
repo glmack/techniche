@@ -1,10 +1,11 @@
 **[summary](#techniche) | [demo web app](https://www.techniche.app) | [usage](#usage) | [walk through notebooks](#running-the-notebooks) | [license](#license)**
 
 # techniche
+Machine learning-based patent signals for technology decisions
 [![Build Status](https://travis-ci.org/glmack/techniche.svg?branch=master)](https://travis-ci.org/glmack/techniche.svg?branch=master)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glmack/techniche/master)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-#### Machine learning-based patent signals for technology decisions 
+
 Techniche is a recommendation engine that offers machine learning-based decision support to help business users surface technology ideas from patent documents for machine learning inventions.
 
 #### Business understanding
