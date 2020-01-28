@@ -69,4 +69,4 @@ Techniche predicts technology recommendations using a hybrid recommender system.
 Recommendations are evaluated in terms of relevance to technology decision-makers. Intermediate intrinsic evaluation metrics, such as coherence and perplexity metrics for LDA provide additional diagnostics.
 
 #### Deployment
-Techniche is available for user experimentation as a Flask [web app](https://www.techniche.app) that offers a search interface where - as an intermediate demo step - users can input text strings describing technical areas and return predicted topics and their associated word co-occurences.
+Techniche will be made available for user experimentation as a Flask web app that offers a search interface where - as an intermediate demo step - users can input text strings describing technical areas and return predicted topics and their associated word co-occurences.
