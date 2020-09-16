@@ -1,0 +1,15 @@
+# These are vendored files for github linguist to ignore
+deploy/webapp/static/gulpfile.js -linguist-vendored
+deploy/webapp/static/js/grayscale.js -linguist-vendored
+deploy/webapp/static/js/grayscale.min.js -linguist-vendored
+deploy/webapp/static/vendor/bootstrap/js/bootstrap.bundle.js -linguist-vendored
+deploy/webapp/static/vendor/bootstrap/js/bootstrap.bundle.min.js -linguist-vendored
+deploy/webapp/static/vendor/bootstrap/js/bootstrap.js -linguist-vendored
+deploy/webapp/static/vendor/bootstrap/js/bootstrap.min.js -linguist-vendored
+deploy/webapp/static/vendor/jquery-easing/jquery.easing.compatibility.js -linguist-vendored
+deploy/webapp/static/vendor/jquery-easing/jquery.easing.js -linguist-vendored
+deploy/webapp/static/vendor/jquery-easing/jquery.easing.min.js -linguist-vendored
+deploy/webapp/static/vendor/jquery/jquery.js -linguist-vendored
+deploy/webapp/static/vendor/jquery/jquery.min.js -linguist-vendored
+deploy/webapp/static/vendor/jquery/jquery.slim.js -linguist-vendored
+deploy/webapp/static/vendor/jquery/jquery.slim.min.js -linguist-vendored
