@@ -1,4 +1,5 @@
 # These are vendored files for github linguist to ignore
+deploy/webapp/static/* linguist-vendored
 deploy/webapp/static/gulpfile.js -linguist-vendored
 deploy/webapp/static/js/grayscale.js -linguist-vendored
 deploy/webapp/static/js/grayscale.min.js -linguist-vendored
