@@ -68,48 +68,48 @@
 # - (^|/)\.indent\.pro
 
 # Minified JavaScript and CSS
-- (\.|-)min\.(js|css)$
+- (\.|-)min\.(js|css)$ -linguist-vendored
 
 # Stylesheets imported from packages
-- ([^\s]*)import\.(css|less|scss|styl)$
+- ([^\s]*)import\.(css|less|scss|styl)$ -linguist-vendored
 
 # Bootstrap css and js
-- (^|/)bootstrap([^.]*)\.(js|css|less|scss|styl)$
-- (^|/)custom\.bootstrap([^\s]*)(js|css|less|scss|styl)$
+- (^|/)bootstrap([^.]*)\.(js|css|less|scss|styl)$ -linguist-vendored
+- (^|/)custom\.bootstrap([^\s]*)(js|css|less|scss|styl)$ -linguist-vendored
 
 # Font Awesome
-- (^|/)font-?awesome\.(css|less|scss|styl)$
-- (^|/)font-?awesome/.*\.(css|less|scss|styl)$
+- (^|/)font-?awesome\.(css|less|scss|styl)$ -linguist-vendored
+- (^|/)font-?awesome/.*\.(css|less|scss|styl)$ -linguist-vendored
 
 # Foundation css
-- (^|/)foundation\.(css|less|scss|styl)$
+- (^|/)foundation\.(css|less|scss|styl)$ -linguist-vendored
 
 # Normalize.css
-- (^|/)normalize\.(css|less|scss|styl)$
+- (^|/)normalize\.(css|less|scss|styl)$ -linguist-vendored
 
 # Skeleton.css
-- (^|/)skeleton\.(css|less|scss|styl)$
+- (^|/)skeleton\.(css|less|scss|styl)$ -linguist-vendored
 
 # Bourbon css
-- (^|/)[Bb]ourbon/.*\.(css|less|scss|styl)$
+- (^|/)[Bb]ourbon/.*\.(css|less|scss|styl)$ -linguist-vendored
 
 # Animate.css
-- (^|/)animate\.(css|less|scss|styl)$
+- (^|/)animate\.(css|less|scss|styl)$ -linguist-vendored
 
 # Materialize.css
-- (^|/)materialize\.(css|less|scss|styl|js)$
+- (^|/)materialize\.(css|less|scss|styl|js)$ -linguist-vendored
 
 # Select2
-- (^|/)select2/.*\.(css|scss|js)$
+- (^|/)select2/.*\.(css|scss|js)$ -linguist-vendored
 
 # Bulma css
-- (^|/)bulma\.(css|sass|scss)$
+- (^|/)bulma\.(css|sass|scss)$ -linguist-vendored
 
 # Vendored dependencies
-- (3rd|[Tt]hird)[-_]?[Pp]arty/
-- (^|/)vendors?/
-- (^|/)extern(al)?/
-- (^|/)[Vv]+endor/
+- (3rd|[Tt]hird)[-_]?[Pp]arty/ -linguist-vendored
+- (^|/)vendors?/ -linguist-vendored
+- (^|/)extern(al)?/ -linguist-vendored
+- (^|/)[Vv]+endor/ -linguist-vendored
 
 # Debian packaging
 - ^debian/
@@ -118,41 +118,41 @@
 - (^|/)run\.n$
 
 # Bootstrap Datepicker
-- (^|/)bootstrap-datepicker/
+- (^|/)bootstrap-datepicker/ -linguist-vendored
 
 ## Commonly Bundled JavaScript frameworks ##
 
 # jQuery
-- (^|/)jquery([^.]*)\.js$
-- (^|/)jquery\-\d\.\d+(\.\d+)?\.js$
+- (^|/)jquery([^.]*)\.js$ -linguist-vendored
+- (^|/)jquery\-\d\.\d+(\.\d+)?\.js$ -linguist-vendored
 
 # jQuery UI
-- (^|/)jquery\-ui(\-\d\.\d+(\.\d+)?)?(\.\w+)?\.(js|css)$
-- (^|/)jquery\.(ui|effects)\.([^.]*)\.(js|css)$
+- (^|/)jquery\-ui(\-\d\.\d+(\.\d+)?)?(\.\w+)?\.(js|css)$ -linguist-vendored
+- (^|/)jquery\.(ui|effects)\.([^.]*)\.(js|css)$ -linguist-vendored
 
 # jQuery Gantt
-- (^|/)jquery\.fn\.gantt\.js
+- (^|/)jquery\.fn\.gantt\.js -linguist-vendored
 
 # jQuery fancyBox
-- (^|/)jquery\.fancybox\.(js|css)
+- (^|/)jquery\.fancybox\.(js|css) -linguist-vendored
 
 # Fuel UX
-- (^|/)fuelux\.js
+- (^|/)fuelux\.js -linguist-vendored
 
 # jQuery File Upload
-- (^|/)jquery\.fileupload(-\w+)?\.js$
+- (^|/)jquery\.fileupload(-\w+)?\.js$ -linguist-vendored
 
 # jQuery dataTables
-- (^|/)jquery\.dataTables\.js
+- (^|/)jquery\.dataTables\.js -linguist-vendored
 
 # bootboxjs
-- (^|/)bootbox\.js
+- (^|/)bootbox\.js -linguist-vendored
 
 # pdf-worker
-- (^|/)pdf\.worker\.js
+- (^|/)pdf\.worker\.js -linguist-vendored
 
 # Slick
-- (^|/)slick\.\w+.js$
+- (^|/)slick\.\w+.js$ -linguist-vendored
 
 # Leaflet plugins
 - (^|/)Leaflet\.Coordinates-\d+\.\d+\.\d+\.src\.js$
@@ -168,7 +168,7 @@
 - (^|/)\.sublime-workspace
 
 # VS Code workspace files
-- (^|/)\.vscode/
+- (^|/)\.vscode/ 
 
 # Prototype
 - (^|/)prototype(.*)\.js$
